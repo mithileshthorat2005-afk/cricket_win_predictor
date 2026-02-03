@@ -1,0 +1,755 @@
+match_id,team1,team2,team1_score,team2_score,winner,win_by,win_type
+1,Sunrisers Hyderabad,Royal Challengers Bangalore,207,172,Sunrisers Hyderabad,35,runs
+2,Mumbai Indians,Rising Pune Supergiant,184,187,Rising Pune Supergiant,3,wickets
+3,Gujarat Lions,Kolkata Knight Riders,183,184,Kolkata Knight Riders,1,wickets
+4,Rising Pune Supergiant,Kings XI Punjab,163,164,Kings XI Punjab,1,wickets
+5,Royal Challengers Bangalore,Delhi Daredevils,157,142,Royal Challengers Bangalore,15,runs
+6,Gujarat Lions,Sunrisers Hyderabad,135,140,Sunrisers Hyderabad,5,wickets
+7,Kolkata Knight Riders,Mumbai Indians,178,180,Mumbai Indians,2,wickets
+8,Royal Challengers Bangalore,Kings XI Punjab,148,150,Kings XI Punjab,2,wickets
+9,Delhi Daredevils,Rising Pune Supergiant,205,108,Delhi Daredevils,97,runs
+10,Sunrisers Hyderabad,Mumbai Indians,158,159,Mumbai Indians,1,wickets
+11,Kings XI Punjab,Kolkata Knight Riders,170,171,Kolkata Knight Riders,1,wickets
+12,Royal Challengers Bangalore,Mumbai Indians,142,145,Mumbai Indians,3,wickets
+13,Rising Pune Supergiant,Gujarat Lions,171,172,Gujarat Lions,1,wickets
+14,Kolkata Knight Riders,Sunrisers Hyderabad,172,155,Kolkata Knight Riders,17,runs
+15,Delhi Daredevils,Kings XI Punjab,188,137,Delhi Daredevils,51,runs
+16,Gujarat Lions,Mumbai Indians,176,177,Mumbai Indians,1,wickets
+17,Rising Pune Supergiant,Royal Challengers Bangalore,161,134,Rising Pune Supergiant,27,runs
+18,Delhi Daredevils,Kolkata Knight Riders,168,169,Kolkata Knight Riders,1,wickets
+19,Sunrisers Hyderabad,Kings XI Punjab,159,154,Sunrisers Hyderabad,5,runs
+20,Royal Challengers Bangalore,Gujarat Lions,213,192,Royal Challengers Bangalore,21,runs
+21,Sunrisers Hyderabad,Delhi Daredevils,191,176,Sunrisers Hyderabad,15,runs
+22,Kings XI Punjab,Mumbai Indians,198,199,Mumbai Indians,1,wickets
+23,Kolkata Knight Riders,Gujarat Lions,187,188,Gujarat Lions,1,wickets
+24,Mumbai Indians,Delhi Daredevils,142,128,Mumbai Indians,14,runs
+25,Sunrisers Hyderabad,Rising Pune Supergiant,176,179,Rising Pune Supergiant,3,wickets
+26,Kings XI Punjab,Gujarat Lions,188,162,Kings XI Punjab,26,runs
+27,Kolkata Knight Riders,Royal Challengers Bangalore,131,49,Kolkata Knight Riders,82,runs
+28,Rising Pune Supergiant,Mumbai Indians,160,157,Rising Pune Supergiant,3,runs
+29,Rising Pune Supergiant,Kolkata Knight Riders,182,184,Kolkata Knight Riders,2,wickets
+30,Royal Challengers Bangalore,Gujarat Lions,134,135,Gujarat Lions,1,wickets
+31,Delhi Daredevils,Kolkata Knight Riders,160,161,Kolkata Knight Riders,1,wickets
+32,Sunrisers Hyderabad,Kings XI Punjab,207,181,Sunrisers Hyderabad,26,runs
+33,Rising Pune Supergiant,Royal Challengers Bangalore,157,96,Rising Pune Supergiant,61,runs
+34,Gujarat Lions,Mumbai Indians,153,153,Draw,0,draw
+35,Delhi Daredevils,Kings XI Punjab,67,68,Kings XI Punjab,1,wickets
+36,Sunrisers Hyderabad,Kolkata Knight Riders,209,161,Sunrisers Hyderabad,48,runs
+37,Royal Challengers Bangalore,Mumbai Indians,162,165,Mumbai Indians,3,wickets
+38,Gujarat Lions,Rising Pune Supergiant,161,167,Rising Pune Supergiant,6,wickets
+39,Sunrisers Hyderabad,Delhi Daredevils,185,189,Delhi Daredevils,4,wickets
+40,Kolkata Knight Riders,Rising Pune Supergiant,155,158,Rising Pune Supergiant,3,wickets
+41,Gujarat Lions,Delhi Daredevils,208,214,Delhi Daredevils,6,wickets
+42,Kings XI Punjab,Royal Challengers Bangalore,138,119,Kings XI Punjab,19,runs
+43,Rising Pune Supergiant,Sunrisers Hyderabad,148,136,Rising Pune Supergiant,12,runs
+44,Mumbai Indians,Delhi Daredevils,212,66,Mumbai Indians,146,runs
+45,Royal Challengers Bangalore,Kolkata Knight Riders,158,159,Kolkata Knight Riders,1,wickets
+46,Kings XI Punjab,Gujarat Lions,189,192,Gujarat Lions,3,wickets
+47,Mumbai Indians,Sunrisers Hyderabad,138,140,Sunrisers Hyderabad,2,wickets
+48,Kings XI Punjab,Kolkata Knight Riders,167,153,Kings XI Punjab,14,runs
+49,Gujarat Lions,Delhi Daredevils,195,197,Delhi Daredevils,2,wickets
+50,Kings XI Punjab,Mumbai Indians,230,223,Kings XI Punjab,7,runs
+51,Delhi Daredevils,Rising Pune Supergiant,168,161,Delhi Daredevils,7,runs
+52,Gujarat Lions,Sunrisers Hyderabad,154,158,Sunrisers Hyderabad,4,wickets
+53,Mumbai Indians,Kolkata Knight Riders,173,164,Mumbai Indians,9,runs
+54,Kings XI Punjab,Rising Pune Supergiant,73,78,Rising Pune Supergiant,5,wickets
+55,Royal Challengers Bangalore,Delhi Daredevils,161,151,Royal Challengers Bangalore,10,runs
+56,Rising Pune Supergiant,Mumbai Indians,162,142,Rising Pune Supergiant,20,runs
+57,Sunrisers Hyderabad,Kolkata Knight Riders,128,48,Sunrisers Hyderabad,80,runs
+58,Kolkata Knight Riders,Mumbai Indians,107,111,Mumbai Indians,4,wickets
+59,Mumbai Indians,Rising Pune Supergiant,129,128,Mumbai Indians,1,runs
+60,Kolkata Knight Riders,Royal Challengers Bangalore,222,82,Kolkata Knight Riders,140,runs
+61,Chennai Super Kings,Kings XI Punjab,240,207,Chennai Super Kings,33,runs
+62,Rajasthan Royals,Delhi Daredevils,129,132,Delhi Daredevils,3,wickets
+63,Mumbai Indians,Royal Challengers Bangalore,165,166,Royal Challengers Bangalore,1,wickets
+64,Deccan Chargers,Kolkata Knight Riders,110,112,Kolkata Knight Riders,2,wickets
+65,Kings XI Punjab,Rajasthan Royals,166,168,Rajasthan Royals,2,wickets
+66,Deccan Chargers,Delhi Daredevils,142,143,Delhi Daredevils,1,wickets
+67,Chennai Super Kings,Mumbai Indians,208,202,Chennai Super Kings,6,runs
+68,Deccan Chargers,Rajasthan Royals,214,217,Rajasthan Royals,3,wickets
+69,Kings XI Punjab,Mumbai Indians,182,116,Kings XI Punjab,66,runs
+70,Royal Challengers Bangalore,Rajasthan Royals,135,138,Rajasthan Royals,3,wickets
+71,Kolkata Knight Riders,Chennai Super Kings,147,152,Chennai Super Kings,5,wickets
+72,Mumbai Indians,Deccan Chargers,154,155,Deccan Chargers,1,wickets
+73,Delhi Daredevils,Kings XI Punjab,158,162,Kings XI Punjab,4,wickets
+74,Chennai Super Kings,Royal Challengers Bangalore,178,165,Chennai Super Kings,13,runs
+75,Kolkata Knight Riders,Mumbai Indians,137,138,Mumbai Indians,1,wickets
+76,Delhi Daredevils,Royal Challengers Bangalore,191,181,Delhi Daredevils,10,runs
+77,Deccan Chargers,Kings XI Punjab,164,167,Kings XI Punjab,3,wickets
+78,Rajasthan Royals,Kolkata Knight Riders,196,151,Rajasthan Royals,45,runs
+79,Chennai Super Kings,Delhi Daredevils,169,172,Delhi Daredevils,3,wickets
+80,Deccan Chargers,Royal Challengers Bangalore,165,171,Royal Challengers Bangalore,6,wickets
+81,Kings XI Punjab,Kolkata Knight Riders,178,169,Kings XI Punjab,9,runs
+82,Mumbai Indians,Delhi Daredevils,162,133,Mumbai Indians,29,runs
+83,Chennai Super Kings,Rajasthan Royals,109,110,Rajasthan Royals,1,wickets
+84,Royal Challengers Bangalore,Kings XI Punjab,126,127,Kings XI Punjab,1,wickets
+85,Chennai Super Kings,Deccan Chargers,144,148,Deccan Chargers,4,wickets
+86,Rajasthan Royals,Mumbai Indians,103,104,Mumbai Indians,1,wickets
+87,Delhi Daredevils,Chennai Super Kings,187,188,Chennai Super Kings,1,wickets
+88,Kolkata Knight Riders,Royal Challengers Bangalore,129,124,Kolkata Knight Riders,5,runs
+89,Deccan Chargers,Rajasthan Royals,140,141,Rajasthan Royals,1,wickets
+90,Royal Challengers Bangalore,Mumbai Indians,122,126,Mumbai Indians,4,wickets
+91,Chennai Super Kings,Kings XI Punjab,181,163,Chennai Super Kings,18,runs
+92,Kolkata Knight Riders,Deccan Chargers,204,181,Kolkata Knight Riders,23,runs
+93,Delhi Daredevils,Rajasthan Royals,156,159,Rajasthan Royals,3,wickets
+94,Royal Challengers Bangalore,Kings XI Punjab,143,144,Kings XI Punjab,1,wickets
+95,Kolkata Knight Riders,Delhi Daredevils,133,110,Kolkata Knight Riders,23,runs
+96,Chennai Super Kings,Mumbai Indians,156,158,Mumbai Indians,2,wickets
+97,Kings XI Punjab,Rajasthan Royals,221,180,Kings XI Punjab,41,runs
+98,Delhi Daredevils,Deccan Chargers,194,182,Delhi Daredevils,12,runs
+99,Kolkata Knight Riders,Mumbai Indians,67,68,Mumbai Indians,1,wickets
+100,Delhi Daredevils,Kings XI Punjab,118,94,Delhi Daredevils,24,runs
+101,Rajasthan Royals,Royal Challengers Bangalore,197,132,Rajasthan Royals,65,runs
+102,Mumbai Indians,Deccan Chargers,178,153,Mumbai Indians,25,runs
+103,Kolkata Knight Riders,Chennai Super Kings,149,55,Kolkata Knight Riders,94,runs
+104,Royal Challengers Bangalore,Delhi Daredevils,154,158,Delhi Daredevils,4,wickets
+105,Kolkata Knight Riders,Rajasthan Royals,147,150,Rajasthan Royals,3,wickets
+106,Kings XI Punjab,Mumbai Indians,189,188,Kings XI Punjab,1,runs
+107,Royal Challengers Bangalore,Chennai Super Kings,126,112,Royal Challengers Bangalore,14,runs
+108,Deccan Chargers,Kings XI Punjab,175,178,Kings XI Punjab,3,wickets
+109,Mumbai Indians,Delhi Daredevils,176,179,Delhi Daredevils,3,wickets
+110,Rajasthan Royals,Chennai Super Kings,211,201,Rajasthan Royals,10,runs
+111,Royal Challengers Bangalore,Deccan Chargers,156,153,Royal Challengers Bangalore,3,runs
+112,Kings XI Punjab,Kolkata Knight Riders,174,175,Kolkata Knight Riders,1,wickets
+113,Mumbai Indians,Rajasthan Royals,145,146,Rajasthan Royals,1,wickets
+114,Deccan Chargers,Chennai Super Kings,147,148,Chennai Super Kings,1,wickets
+115,Rajasthan Royals,Delhi Daredevils,192,87,Rajasthan Royals,105,runs
+116,Kings XI Punjab,Chennai Super Kings,112,116,Chennai Super Kings,4,wickets
+117,Chennai Super Kings,Rajasthan Royals,163,164,Rajasthan Royals,1,wickets
+118,Mumbai Indians,Chennai Super Kings,165,146,Mumbai Indians,19,runs
+119,Royal Challengers Bangalore,Rajasthan Royals,133,58,Royal Challengers Bangalore,75,runs
+120,Kings XI Punjab,Delhi Daredevils,104,58,Kings XI Punjab,46,runs
+121,Kolkata Knight Riders,Deccan Chargers,101,104,Deccan Chargers,3,wickets
+122,Chennai Super Kings,Royal Challengers Bangalore,179,87,Chennai Super Kings,92,runs
+123,Kings XI Punjab,Kolkata Knight Riders,158,79,Kings XI Punjab,79,runs
+124,Deccan Chargers,Royal Challengers Bangalore,184,160,Deccan Chargers,24,runs
+125,Delhi Daredevils,Chennai Super Kings,189,180,Delhi Daredevils,9,runs
+126,Rajasthan Royals,Kolkata Knight Riders,150,150,Draw,0,draw
+127,Royal Challengers Bangalore,Kings XI Punjab,168,173,Kings XI Punjab,5,wickets
+128,Deccan Chargers,Mumbai Indians,168,156,Deccan Chargers,12,runs
+129,Royal Challengers Bangalore,Delhi Daredevils,149,150,Delhi Daredevils,1,wickets
+130,Kings XI Punjab,Rajasthan Royals,139,112,Kings XI Punjab,27,runs
+131,Chennai Super Kings,Deccan Chargers,165,169,Deccan Chargers,4,wickets
+132,Mumbai Indians,Kolkata Knight Riders,187,95,Mumbai Indians,92,runs
+133,Delhi Daredevils,Rajasthan Royals,143,147,Rajasthan Royals,4,wickets
+134,Kolkata Knight Riders,Royal Challengers Bangalore,139,143,Royal Challengers Bangalore,4,wickets
+135,Kings XI Punjab,Mumbai Indians,119,116,Kings XI Punjab,3,runs
+136,Deccan Chargers,Delhi Daredevils,148,150,Delhi Daredevils,2,wickets
+137,Chennai Super Kings,Rajasthan Royals,164,126,Chennai Super Kings,38,runs
+138,Mumbai Indians,Kolkata Knight Riders,148,139,Mumbai Indians,9,runs
+139,Royal Challengers Bangalore,Kings XI Punjab,145,137,Royal Challengers Bangalore,8,runs
+140,Deccan Chargers,Rajasthan Royals,141,142,Rajasthan Royals,1,wickets
+141,Chennai Super Kings,Delhi Daredevils,163,145,Chennai Super Kings,18,runs
+142,Kolkata Knight Riders,Kings XI Punjab,153,154,Kings XI Punjab,1,wickets
+143,Mumbai Indians,Royal Challengers Bangalore,149,150,Royal Challengers Bangalore,1,wickets
+144,Chennai Super Kings,Deccan Chargers,178,100,Chennai Super Kings,78,runs
+145,Rajasthan Royals,Kings XI Punjab,211,133,Rajasthan Royals,78,runs
+146,Kolkata Knight Riders,Delhi Daredevils,154,157,Delhi Daredevils,3,wickets
+147,Deccan Chargers,Mumbai Indians,145,126,Deccan Chargers,19,runs
+148,Royal Challengers Bangalore,Rajasthan Royals,105,107,Rajasthan Royals,2,wickets
+149,Chennai Super Kings,Kings XI Punjab,185,174,Chennai Super Kings,11,runs
+150,Mumbai Indians,Delhi Daredevils,116,118,Delhi Daredevils,2,wickets
+151,Deccan Chargers,Kings XI Punjab,168,169,Kings XI Punjab,1,wickets
+152,Rajasthan Royals,Chennai Super Kings,140,141,Chennai Super Kings,1,wickets
+153,Mumbai Indians,Royal Challengers Bangalore,157,141,Mumbai Indians,16,runs
+154,Kolkata Knight Riders,Delhi Daredevils,123,125,Delhi Daredevils,2,wickets
+155,Deccan Chargers,Rajasthan Royals,166,113,Deccan Chargers,53,runs
+156,Kolkata Knight Riders,Royal Challengers Bangalore,173,176,Royal Challengers Bangalore,3,wickets
+157,Kings XI Punjab,Mumbai Indians,119,122,Mumbai Indians,3,wickets
+158,Delhi Daredevils,Deccan Chargers,173,161,Delhi Daredevils,12,runs
+159,Chennai Super Kings,Royal Challengers Bangalore,129,132,Royal Challengers Bangalore,3,wickets
+160,Rajasthan Royals,Mumbai Indians,145,143,Rajasthan Royals,2,runs
+161,Delhi Daredevils,Kings XI Punjab,120,123,Kings XI Punjab,3,wickets
+162,Mumbai Indians,Chennai Super Kings,147,151,Chennai Super Kings,4,wickets
+163,Kolkata Knight Riders,Deccan Chargers,160,166,Deccan Chargers,6,wickets
+164,Kings XI Punjab,Deccan Chargers,134,133,Kings XI Punjab,1,runs
+165,Delhi Daredevils,Rajasthan Royals,150,136,Delhi Daredevils,14,runs
+166,Chennai Super Kings,Kolkata Knight Riders,188,189,Kolkata Knight Riders,1,wickets
+167,Delhi Daredevils,Royal Challengers Bangalore,134,135,Royal Challengers Bangalore,1,wickets
+168,Rajasthan Royals,Kolkata Knight Riders,101,102,Kolkata Knight Riders,1,wickets
+169,Chennai Super Kings,Kings XI Punjab,116,92,Chennai Super Kings,24,runs
+170,Mumbai Indians,Delhi Daredevils,165,166,Delhi Daredevils,1,wickets
+171,Royal Challengers Bangalore,Deccan Chargers,170,158,Royal Challengers Bangalore,12,runs
+172,Delhi Daredevils,Deccan Chargers,153,154,Deccan Chargers,1,wickets
+173,Chennai Super Kings,Royal Challengers Bangalore,146,149,Royal Challengers Bangalore,3,wickets
+174,Deccan Chargers,Royal Challengers Bangalore,143,137,Deccan Chargers,6,runs
+175,Kolkata Knight Riders,Deccan Chargers,161,150,Kolkata Knight Riders,11,runs
+176,Mumbai Indians,Rajasthan Royals,212,208,Mumbai Indians,4,runs
+177,Kings XI Punjab,Delhi Daredevils,142,146,Delhi Daredevils,4,wickets
+178,Royal Challengers Bangalore,Kolkata Knight Riders,135,136,Kolkata Knight Riders,1,wickets
+179,Deccan Chargers,Chennai Super Kings,190,159,Deccan Chargers,31,runs
+180,Rajasthan Royals,Delhi Daredevils,141,142,Delhi Daredevils,1,wickets
+181,Kings XI Punjab,Royal Challengers Bangalore,203,204,Royal Challengers Bangalore,1,wickets
+182,Chennai Super Kings,Kolkata Knight Riders,164,109,Chennai Super Kings,55,runs
+183,Mumbai Indians,Delhi Daredevils,218,120,Mumbai Indians,98,runs
+184,Rajasthan Royals,Royal Challengers Bangalore,92,93,Royal Challengers Bangalore,1,wickets
+185,Delhi Daredevils,Chennai Super Kings,185,190,Chennai Super Kings,5,wickets
+186,Deccan Chargers,Kings XI Punjab,170,164,Deccan Chargers,6,runs
+187,Rajasthan Royals,Kolkata Knight Riders,168,134,Rajasthan Royals,34,runs
+188,Mumbai Indians,Royal Challengers Bangalore,151,155,Royal Challengers Bangalore,4,wickets
+189,Deccan Chargers,Delhi Daredevils,171,161,Deccan Chargers,10,runs
+190,Kings XI Punjab,Chennai Super Kings,136,136,Draw,0,draw
+191,Kolkata Knight Riders,Mumbai Indians,155,156,Mumbai Indians,1,wickets
+192,Royal Challengers Bangalore,Chennai Super Kings,171,135,Royal Challengers Bangalore,36,runs
+193,Rajasthan Royals,Kings XI Punjab,183,152,Rajasthan Royals,31,runs
+194,Chennai Super Kings,Mumbai Indians,180,181,Mumbai Indians,1,wickets
+195,Deccan Chargers,Rajasthan Royals,148,151,Rajasthan Royals,3,wickets
+196,Kolkata Knight Riders,Kings XI Punjab,183,144,Kolkata Knight Riders,39,runs
+197,Delhi Daredevils,Royal Challengers Bangalore,183,166,Delhi Daredevils,17,runs
+198,Rajasthan Royals,Chennai Super Kings,177,160,Rajasthan Royals,17,runs
+199,Mumbai Indians,Deccan Chargers,172,131,Mumbai Indians,41,runs
+200,Delhi Daredevils,Kolkata Knight Riders,177,137,Delhi Daredevils,40,runs
+201,Kings XI Punjab,Mumbai Indians,163,164,Mumbai Indians,1,wickets
+202,Royal Challengers Bangalore,Chennai Super Kings,161,162,Chennai Super Kings,1,wickets
+203,Delhi Daredevils,Rajasthan Royals,188,121,Delhi Daredevils,67,runs
+204,Kolkata Knight Riders,Deccan Chargers,181,157,Kolkata Knight Riders,24,runs
+205,Kings XI Punjab,Royal Challengers Bangalore,181,184,Royal Challengers Bangalore,3,wickets
+206,Chennai Super Kings,Rajasthan Royals,246,223,Chennai Super Kings,23,runs
+207,Mumbai Indians,Deccan Chargers,178,115,Mumbai Indians,63,runs
+208,Kolkata Knight Riders,Kings XI Punjab,200,204,Kings XI Punjab,4,wickets
+209,Delhi Daredevils,Royal Challengers Bangalore,184,147,Delhi Daredevils,37,runs
+210,Rajasthan Royals,Deccan Chargers,159,157,Rajasthan Royals,2,runs
+211,Chennai Super Kings,Mumbai Indians,165,141,Chennai Super Kings,24,runs
+212,Kings XI Punjab,Rajasthan Royals,153,157,Rajasthan Royals,4,wickets
+213,Kolkata Knight Riders,Delhi Daredevils,181,167,Kolkata Knight Riders,14,runs
+214,Royal Challengers Bangalore,Deccan Chargers,184,186,Deccan Chargers,2,wickets
+215,Mumbai Indians,Kings XI Punjab,154,158,Kings XI Punjab,4,wickets
+216,Chennai Super Kings,Deccan Chargers,138,139,Deccan Chargers,1,wickets
+217,Kolkata Knight Riders,Royal Challengers Bangalore,160,162,Royal Challengers Bangalore,2,wickets
+218,Delhi Daredevils,Kings XI Punjab,111,112,Kings XI Punjab,1,wickets
+219,Mumbai Indians,Rajasthan Royals,174,137,Mumbai Indians,37,runs
+220,Deccan Chargers,Royal Challengers Bangalore,151,138,Deccan Chargers,13,runs
+221,Mumbai Indians,Delhi Daredevils,183,144,Mumbai Indians,39,runs
+222,Kolkata Knight Riders,Chennai Super Kings,139,143,Chennai Super Kings,4,wickets
+223,Rajasthan Royals,Royal Challengers Bangalore,130,132,Royal Challengers Bangalore,2,wickets
+224,Chennai Super Kings,Delhi Daredevils,112,113,Delhi Daredevils,1,wickets
+225,Kings XI Punjab,Deccan Chargers,174,178,Deccan Chargers,4,wickets
+226,Mumbai Indians,Royal Challengers Bangalore,191,134,Mumbai Indians,57,runs
+227,Rajasthan Royals,Kolkata Knight Riders,132,133,Kolkata Knight Riders,1,wickets
+228,Kings XI Punjab,Chennai Super Kings,192,195,Chennai Super Kings,3,wickets
+229,Deccan Chargers,Delhi Daredevils,145,134,Deccan Chargers,11,runs
+230,Mumbai Indians,Kolkata Knight Riders,133,135,Kolkata Knight Riders,2,wickets
+231,Mumbai Indians,Royal Challengers Bangalore,184,149,Mumbai Indians,35,runs
+232,Chennai Super Kings,Deccan Chargers,142,104,Chennai Super Kings,38,runs
+233,Deccan Chargers,Royal Challengers Bangalore,82,86,Royal Challengers Bangalore,4,wickets
+234,Chennai Super Kings,Mumbai Indians,168,146,Chennai Super Kings,22,runs
+235,Chennai Super Kings,Kolkata Knight Riders,153,151,Chennai Super Kings,2,runs
+236,Deccan Chargers,Rajasthan Royals,137,141,Rajasthan Royals,4,wickets
+237,Kochi Tuskers Kerala,Royal Challengers Bangalore,161,162,Royal Challengers Bangalore,1,wickets
+238,Delhi Daredevils,Mumbai Indians,95,99,Mumbai Indians,4,wickets
+239,Kings XI Punjab,Pune Warriors,112,113,Pune Warriors,1,wickets
+240,Kolkata Knight Riders,Deccan Chargers,163,154,Kolkata Knight Riders,9,runs
+241,Delhi Daredevils,Rajasthan Royals,151,152,Rajasthan Royals,1,wickets
+242,Royal Challengers Bangalore,Mumbai Indians,140,143,Mumbai Indians,3,wickets
+243,Chennai Super Kings,Kings XI Punjab,188,193,Kings XI Punjab,5,wickets
+244,Kochi Tuskers Kerala,Pune Warriors,148,151,Pune Warriors,3,wickets
+245,Deccan Chargers,Royal Challengers Bangalore,175,142,Deccan Chargers,33,runs
+246,Rajasthan Royals,Kolkata Knight Riders,159,160,Kolkata Knight Riders,1,wickets
+247,Mumbai Indians,Kochi Tuskers Kerala,182,184,Kochi Tuskers Kerala,2,wickets
+248,Chennai Super Kings,Royal Challengers Bangalore,183,162,Chennai Super Kings,21,runs
+249,Deccan Chargers,Kings XI Punjab,165,166,Kings XI Punjab,1,wickets
+250,Pune Warriors,Delhi Daredevils,187,190,Delhi Daredevils,3,wickets
+251,Rajasthan Royals,Kolkata Knight Riders,81,85,Kolkata Knight Riders,4,wickets
+252,Chennai Super Kings,Kochi Tuskers Kerala,131,135,Kochi Tuskers Kerala,4,wickets
+253,Deccan Chargers,Delhi Daredevils,168,152,Deccan Chargers,16,runs
+254,Pune Warriors,Mumbai Indians,118,124,Mumbai Indians,6,wickets
+255,Kochi Tuskers Kerala,Kolkata Knight Riders,132,126,Kochi Tuskers Kerala,6,runs
+256,Kings XI Punjab,Rajasthan Royals,195,147,Kings XI Punjab,48,runs
+257,Mumbai Indians,Chennai Super Kings,164,156,Mumbai Indians,8,runs
+258,Kolkata Knight Riders,Royal Challengers Bangalore,171,175,Royal Challengers Bangalore,4,wickets
+259,Delhi Daredevils,Kings XI Punjab,231,202,Delhi Daredevils,29,runs
+260,Mumbai Indians,Deccan Chargers,172,135,Mumbai Indians,37,runs
+261,Kochi Tuskers Kerala,Rajasthan Royals,109,111,Rajasthan Royals,2,wickets
+262,Chennai Super Kings,Pune Warriors,142,117,Chennai Super Kings,25,runs
+263,Delhi Daredevils,Royal Challengers Bangalore,160,161,Royal Challengers Bangalore,1,wickets
+264,Pune Warriors,Chennai Super Kings,141,145,Chennai Super Kings,4,wickets
+265,Deccan Chargers,Kochi Tuskers Kerala,129,74,Deccan Chargers,55,runs
+266,Kolkata Knight Riders,Delhi Daredevils,148,131,Kolkata Knight Riders,17,runs
+267,Mumbai Indians,Rajasthan Royals,94,95,Rajasthan Royals,1,wickets
+268,Royal Challengers Bangalore,Pune Warriors,181,155,Royal Challengers Bangalore,26,runs
+269,Delhi Daredevils,Kochi Tuskers Kerala,157,119,Delhi Daredevils,38,runs
+270,Kings XI Punjab,Kolkata Knight Riders,119,120,Kolkata Knight Riders,1,wickets
+271,Pune Warriors,Rajasthan Royals,143,144,Rajasthan Royals,1,wickets
+272,Chennai Super Kings,Deccan Chargers,165,146,Chennai Super Kings,19,runs
+273,Mumbai Indians,Kings XI Punjab,159,136,Mumbai Indians,23,runs
+274,Delhi Daredevils,Kochi Tuskers Kerala,140,141,Kochi Tuskers Kerala,1,wickets
+275,Kolkata Knight Riders,Deccan Chargers,169,149,Kolkata Knight Riders,20,runs
+276,Rajasthan Royals,Chennai Super Kings,147,149,Chennai Super Kings,2,wickets
+277,Mumbai Indians,Pune Warriors,160,139,Mumbai Indians,21,runs
+278,Kochi Tuskers Kerala,Kolkata Knight Riders,156,139,Kochi Tuskers Kerala,17,runs
+279,Deccan Chargers,Delhi Daredevils,175,179,Delhi Daredevils,4,wickets
+280,Royal Challengers Bangalore,Kings XI Punjab,205,120,Royal Challengers Bangalore,85,runs
+281,Chennai Super Kings,Kolkata Knight Riders,114,61,Chennai Super Kings,53,runs
+282,Mumbai Indians,Delhi Daredevils,178,146,Mumbai Indians,32,runs
+283,Kochi Tuskers Kerala,Royal Challengers Bangalore,125,128,Royal Challengers Bangalore,3,wickets
+284,Kings XI Punjab,Pune Warriors,119,120,Pune Warriors,1,wickets
+285,Chennai Super Kings,Rajasthan Royals,196,133,Chennai Super Kings,63,runs
+286,Deccan Chargers,Pune Warriors,136,137,Pune Warriors,1,wickets
+287,Kings XI Punjab,Mumbai Indians,163,87,Kings XI Punjab,76,runs
+288,Rajasthan Royals,Royal Challengers Bangalore,146,151,Royal Challengers Bangalore,5,wickets
+289,Chennai Super Kings,Delhi Daredevils,176,158,Chennai Super Kings,18,runs
+290,Kochi Tuskers Kerala,Kings XI Punjab,178,181,Kings XI Punjab,3,wickets
+291,Kolkata Knight Riders,Royal Challengers Bangalore,89,105,Royal Challengers Bangalore,16,wickets
+292,Deccan Chargers,Mumbai Indians,135,125,Deccan Chargers,10,runs
+293,Kings XI Punjab,Delhi Daredevils,170,141,Kings XI Punjab,29,runs
+294,Rajasthan Royals,Kochi Tuskers Kerala,97,98,Kochi Tuskers Kerala,1,wickets
+295,Pune Warriors,Deccan Chargers,136,138,Deccan Chargers,2,wickets
+296,Kings XI Punjab,Royal Challengers Bangalore,232,121,Kings XI Punjab,111,runs
+297,Chennai Super Kings,Kochi Tuskers Kerala,152,141,Chennai Super Kings,11,runs
+298,Pune Warriors,Kolkata Knight Riders,118,119,Kolkata Knight Riders,1,wickets
+299,Mumbai Indians,Rajasthan Royals,133,134,Rajasthan Royals,1,wickets
+300,Deccan Chargers,Kings XI Punjab,198,116,Deccan Chargers,82,runs
+302,Chennai Super Kings,Royal Challengers Bangalore,128,129,Royal Challengers Bangalore,1,wickets
+303,Kolkata Knight Riders,Mumbai Indians,175,178,Mumbai Indians,3,wickets
+304,Royal Challengers Bangalore,Chennai Super Kings,175,177,Chennai Super Kings,2,wickets
+305,Kolkata Knight Riders,Mumbai Indians,147,148,Mumbai Indians,1,wickets
+306,Royal Challengers Bangalore,Mumbai Indians,185,142,Royal Challengers Bangalore,43,runs
+307,Chennai Super Kings,Royal Challengers Bangalore,205,147,Chennai Super Kings,58,runs
+308,Chennai Super Kings,Mumbai Indians,112,115,Mumbai Indians,3,wickets
+309,Kolkata Knight Riders,Delhi Daredevils,97,100,Delhi Daredevils,3,wickets
+310,Pune Warriors,Mumbai Indians,129,101,Pune Warriors,28,runs
+311,Rajasthan Royals,Kings XI Punjab,191,160,Rajasthan Royals,31,runs
+312,Royal Challengers Bangalore,Delhi Daredevils,157,137,Royal Challengers Bangalore,20,runs
+313,Chennai Super Kings,Deccan Chargers,193,119,Chennai Super Kings,74,runs
+314,Rajasthan Royals,Kolkata Knight Riders,164,142,Rajasthan Royals,22,runs
+315,Pune Warriors,Kings XI Punjab,166,144,Pune Warriors,22,runs
+316,Deccan Chargers,Mumbai Indians,138,142,Mumbai Indians,4,wickets
+317,Kolkata Knight Riders,Royal Challengers Bangalore,165,123,Kolkata Knight Riders,42,runs
+318,Chennai Super Kings,Delhi Daredevils,110,111,Delhi Daredevils,1,wickets
+319,Mumbai Indians,Rajasthan Royals,197,170,Mumbai Indians,27,runs
+320,Royal Challengers Bangalore,Chennai Super Kings,205,208,Chennai Super Kings,3,wickets
+321,Pune Warriors,Kings XI Punjab,115,116,Kings XI Punjab,1,wickets
+322,Rajasthan Royals,Kolkata Knight Riders,131,137,Kolkata Knight Riders,6,wickets
+323,Deccan Chargers,Delhi Daredevils,157,162,Delhi Daredevils,5,wickets
+324,Chennai Super Kings,Pune Warriors,155,156,Pune Warriors,1,wickets
+325,Kings XI Punjab,Kolkata Knight Riders,134,132,Kings XI Punjab,2,runs
+326,Rajasthan Royals,Royal Challengers Bangalore,195,136,Rajasthan Royals,59,runs
+327,Mumbai Indians,Delhi Daredevils,92,93,Delhi Daredevils,1,wickets
+328,Deccan Chargers,Rajasthan Royals,196,197,Rajasthan Royals,1,wickets
+329,Pune Warriors,Royal Challengers Bangalore,182,186,Royal Challengers Bangalore,4,wickets
+330,Kings XI Punjab,Kolkata Knight Riders,124,127,Kolkata Knight Riders,3,wickets
+331,Deccan Chargers,Delhi Daredevils,187,193,Delhi Daredevils,6,wickets
+332,Chennai Super Kings,Pune Warriors,164,151,Chennai Super Kings,13,runs
+333,Kings XI Punjab,Royal Challengers Bangalore,163,166,Royal Challengers Bangalore,3,wickets
+334,Rajasthan Royals,Chennai Super Kings,146,147,Chennai Super Kings,1,wickets
+335,Pune Warriors,Delhi Daredevils,192,172,Pune Warriors,20,runs
+336,Mumbai Indians,Kings XI Punjab,163,164,Kings XI Punjab,1,wickets
+337,Deccan Chargers,Kolkata Knight Riders,126,127,Kolkata Knight Riders,1,wickets
+338,Royal Challengers Bangalore,Rajasthan Royals,189,143,Royal Challengers Bangalore,46,runs
+339,Pune Warriors,Delhi Daredevils,146,148,Delhi Daredevils,2,wickets
+340,Kings XI Punjab,Mumbai Indians,168,171,Mumbai Indians,3,wickets
+341,Deccan Chargers,Pune Warriors,177,159,Deccan Chargers,18,runs
+342,Delhi Daredevils,Mumbai Indians,207,170,Delhi Daredevils,37,runs
+343,Kings XI Punjab,Chennai Super Kings,156,149,Kings XI Punjab,7,runs
+344,Kolkata Knight Riders,Royal Challengers Bangalore,190,143,Kolkata Knight Riders,47,runs
+345,Delhi Daredevils,Rajasthan Royals,152,151,Delhi Daredevils,1,runs
+346,Deccan Chargers,Mumbai Indians,100,101,Mumbai Indians,1,wickets
+347,Chennai Super Kings,Kolkata Knight Riders,139,140,Kolkata Knight Riders,1,wickets
+348,Deccan Chargers,Pune Warriors,186,173,Deccan Chargers,13,runs
+349,Rajasthan Royals,Delhi Daredevils,141,144,Delhi Daredevils,3,wickets
+350,Royal Challengers Bangalore,Kings XI Punjab,158,163,Kings XI Punjab,5,wickets
+351,Mumbai Indians,Pune Warriors,120,119,Mumbai Indians,1,runs
+352,Chennai Super Kings,Deccan Chargers,160,150,Chennai Super Kings,10,runs
+353,Kolkata Knight Riders,Pune Warriors,150,143,Kolkata Knight Riders,7,runs
+354,Rajasthan Royals,Kings XI Punjab,177,134,Rajasthan Royals,43,runs
+355,Chennai Super Kings,Mumbai Indians,173,174,Mumbai Indians,1,wickets
+356,Deccan Chargers,Royal Challengers Bangalore,181,185,Royal Challengers Bangalore,4,wickets
+357,Delhi Daredevils,Kolkata Knight Riders,153,154,Kolkata Knight Riders,1,wickets
+358,Pune Warriors,Rajasthan Royals,125,126,Rajasthan Royals,1,wickets
+359,Kings XI Punjab,Deccan Chargers,170,145,Kings XI Punjab,25,runs
+360,Mumbai Indians,Royal Challengers Bangalore,141,142,Royal Challengers Bangalore,1,wickets
+361,Rajasthan Royals,Chennai Super Kings,126,127,Chennai Super Kings,1,wickets
+362,Royal Challengers Bangalore,Pune Warriors,173,138,Royal Challengers Bangalore,35,runs
+363,Mumbai Indians,Kolkata Knight Riders,182,155,Mumbai Indians,27,runs
+364,Delhi Daredevils,Chennai Super Kings,114,115,Chennai Super Kings,1,wickets
+365,Rajasthan Royals,Pune Warriors,170,125,Rajasthan Royals,45,runs
+366,Deccan Chargers,Kings XI Punjab,190,194,Kings XI Punjab,4,wickets
+367,Royal Challengers Bangalore,Mumbai Indians,171,173,Mumbai Indians,2,wickets
+368,Kolkata Knight Riders,Chennai Super Kings,158,160,Chennai Super Kings,2,wickets
+369,Kings XI Punjab,Delhi Daredevils,136,140,Delhi Daredevils,4,wickets
+370,Kolkata Knight Riders,Mumbai Indians,140,108,Kolkata Knight Riders,32,runs
+371,Chennai Super Kings,Kings XI Punjab,120,123,Kings XI Punjab,3,wickets
+372,Royal Challengers Bangalore,Delhi Daredevils,215,194,Royal Challengers Bangalore,21,runs
+373,Rajasthan Royals,Deccan Chargers,126,128,Deccan Chargers,2,wickets
+374,Kings XI Punjab,Delhi Daredevils,141,145,Delhi Daredevils,4,wickets
+375,Kolkata Knight Riders,Pune Warriors,136,102,Kolkata Knight Riders,34,runs
+376,Deccan Chargers,Royal Challengers Bangalore,132,123,Deccan Chargers,9,runs
+377,Rajasthan Royals,Mumbai Indians,162,163,Mumbai Indians,1,wickets
+378,Kolkata Knight Riders,Delhi Daredevils,162,144,Kolkata Knight Riders,18,runs
+379,Chennai Super Kings,Mumbai Indians,187,149,Chennai Super Kings,38,runs
+380,Chennai Super Kings,Delhi Daredevils,222,136,Chennai Super Kings,86,runs
+381,Chennai Super Kings,Kolkata Knight Riders,190,192,Kolkata Knight Riders,2,wickets
+382,Delhi Daredevils,Kolkata Knight Riders,128,129,Kolkata Knight Riders,1,wickets
+383,Royal Challengers Bangalore,Mumbai Indians,156,154,Royal Challengers Bangalore,2,runs
+384,Sunrisers Hyderabad,Pune Warriors,126,104,Sunrisers Hyderabad,22,runs
+385,Rajasthan Royals,Delhi Daredevils,165,160,Rajasthan Royals,5,runs
+386,Mumbai Indians,Chennai Super Kings,148,139,Mumbai Indians,9,runs
+387,Pune Warriors,Kings XI Punjab,99,100,Kings XI Punjab,1,wickets
+388,Royal Challengers Bangalore,Sunrisers Hyderabad,130,130,Draw,0,draw
+389,Rajasthan Royals,Kolkata Knight Riders,144,125,Rajasthan Royals,19,runs
+390,Mumbai Indians,Delhi Daredevils,209,165,Mumbai Indians,44,runs
+391,Kings XI Punjab,Chennai Super Kings,138,139,Chennai Super Kings,1,wickets
+392,Kolkata Knight Riders,Royal Challengers Bangalore,154,158,Royal Challengers Bangalore,4,wickets
+393,Rajasthan Royals,Pune Warriors,145,148,Pune Warriors,3,wickets
+394,Delhi Daredevils,Sunrisers Hyderabad,114,115,Sunrisers Hyderabad,1,wickets
+395,Mumbai Indians,Pune Warriors,183,142,Mumbai Indians,41,runs
+396,Royal Challengers Bangalore,Chennai Super Kings,165,166,Chennai Super Kings,1,wickets
+397,Kolkata Knight Riders,Sunrisers Hyderabad,180,132,Kolkata Knight Riders,48,runs
+398,Kings XI Punjab,Rajasthan Royals,124,126,Rajasthan Royals,2,wickets
+399,Pune Warriors,Chennai Super Kings,159,135,Pune Warriors,24,runs
+400,Kings XI Punjab,Kolkata Knight Riders,157,153,Kings XI Punjab,4,runs
+401,Delhi Daredevils,Royal Challengers Bangalore,152,152,Draw,0,draw
+402,Sunrisers Hyderabad,Pune Warriors,119,108,Sunrisers Hyderabad,11,runs
+403,Rajasthan Royals,Mumbai Indians,179,92,Rajasthan Royals,87,runs
+404,Chennai Super Kings,Delhi Daredevils,169,83,Chennai Super Kings,86,runs
+405,Kings XI Punjab,Sunrisers Hyderabad,123,127,Sunrisers Hyderabad,4,wickets
+406,Kolkata Knight Riders,Chennai Super Kings,119,124,Chennai Super Kings,5,wickets
+407,Rajasthan Royals,Royal Challengers Bangalore,117,123,Royal Challengers Bangalore,6,wickets
+408,Mumbai Indians,Delhi Daredevils,161,165,Delhi Daredevils,4,wickets
+409,Pune Warriors,Kings XI Punjab,185,186,Kings XI Punjab,1,wickets
+410,Rajasthan Royals,Chennai Super Kings,185,186,Chennai Super Kings,1,wickets
+411,Royal Challengers Bangalore,Pune Warriors,263,133,Royal Challengers Bangalore,130,runs
+412,Kings XI Punjab,Delhi Daredevils,171,164,Kings XI Punjab,7,runs
+413,Kolkata Knight Riders,Mumbai Indians,159,162,Mumbai Indians,3,wickets
+414,Sunrisers Hyderabad,Chennai Super Kings,159,160,Chennai Super Kings,1,wickets
+415,Kings XI Punjab,Kolkata Knight Riders,149,150,Kolkata Knight Riders,1,wickets
+416,Sunrisers Hyderabad,Rajasthan Royals,144,146,Rajasthan Royals,2,wickets
+417,Mumbai Indians,Royal Challengers Bangalore,194,136,Mumbai Indians,58,runs
+418,Chennai Super Kings,Kolkata Knight Riders,200,186,Chennai Super Kings,14,runs
+419,Delhi Daredevils,Pune Warriors,164,149,Delhi Daredevils,15,runs
+420,Royal Challengers Bangalore,Rajasthan Royals,171,173,Rajasthan Royals,2,wickets
+421,Mumbai Indians,Kings XI Punjab,174,170,Mumbai Indians,4,runs
+422,Chennai Super Kings,Pune Warriors,164,127,Chennai Super Kings,37,runs
+423,Mumbai Indians,Sunrisers Hyderabad,129,130,Sunrisers Hyderabad,1,wickets
+424,Kolkata Knight Riders,Delhi Daredevils,136,137,Delhi Daredevils,1,wickets
+425,Chennai Super Kings,Kings XI Punjab,186,171,Chennai Super Kings,15,runs
+426,Royal Challengers Bangalore,Pune Warriors,187,170,Royal Challengers Bangalore,17,runs
+427,Rajasthan Royals,Kolkata Knight Riders,132,133,Kolkata Knight Riders,1,wickets
+428,Delhi Daredevils,Sunrisers Hyderabad,80,81,Sunrisers Hyderabad,1,wickets
+429,Royal Challengers Bangalore,Kings XI Punjab,174,176,Kings XI Punjab,2,wickets
+430,Mumbai Indians,Chennai Super Kings,139,79,Mumbai Indians,60,runs
+431,Pune Warriors,Rajasthan Royals,178,182,Rajasthan Royals,4,wickets
+432,Sunrisers Hyderabad,Royal Challengers Bangalore,161,162,Royal Challengers Bangalore,1,wickets
+433,Delhi Daredevils,Rajasthan Royals,154,155,Rajasthan Royals,1,wickets
+434,Mumbai Indians,Kolkata Knight Riders,170,105,Mumbai Indians,65,runs
+435,Chennai Super Kings,Sunrisers Hyderabad,223,146,Chennai Super Kings,77,runs
+436,Kings XI Punjab,Rajasthan Royals,145,147,Rajasthan Royals,2,wickets
+437,Kolkata Knight Riders,Pune Warriors,152,106,Kolkata Knight Riders,46,runs
+438,Royal Challengers Bangalore,Delhi Daredevils,183,179,Royal Challengers Bangalore,4,runs
+439,Pune Warriors,Mumbai Indians,112,116,Mumbai Indians,4,wickets
+440,Sunrisers Hyderabad,Kings XI Punjab,150,120,Sunrisers Hyderabad,30,runs
+441,Royal Challengers Bangalore,Kolkata Knight Riders,115,116,Kolkata Knight Riders,1,wickets
+442,Chennai Super Kings,Rajasthan Royals,141,144,Rajasthan Royals,3,wickets
+443,Delhi Daredevils,Kings XI Punjab,120,121,Kings XI Punjab,1,wickets
+444,Sunrisers Hyderabad,Mumbai Indians,178,184,Mumbai Indians,6,wickets
+445,Pune Warriors,Kolkata Knight Riders,170,163,Pune Warriors,7,runs
+446,Chennai Super Kings,Delhi Daredevils,168,135,Chennai Super Kings,33,runs
+447,Mumbai Indians,Rajasthan Royals,166,152,Mumbai Indians,14,runs
+448,Royal Challengers Bangalore,Kings XI Punjab,190,194,Kings XI Punjab,4,wickets
+449,Sunrisers Hyderabad,Rajasthan Royals,136,113,Sunrisers Hyderabad,23,runs
+450,Kings XI Punjab,Mumbai Indians,183,133,Kings XI Punjab,50,runs
+451,Pune Warriors,Delhi Daredevils,172,134,Pune Warriors,38,runs
+452,Royal Challengers Bangalore,Chennai Super Kings,106,82,Royal Challengers Bangalore,24,runs
+453,Kolkata Knight Riders,Sunrisers Hyderabad,130,132,Sunrisers Hyderabad,2,wickets
+454,Chennai Super Kings,Mumbai Indians,192,144,Chennai Super Kings,48,runs
+455,Sunrisers Hyderabad,Rajasthan Royals,132,135,Rajasthan Royals,3,wickets
+456,Rajasthan Royals,Mumbai Indians,165,169,Mumbai Indians,4,wickets
+457,Mumbai Indians,Chennai Super Kings,148,125,Mumbai Indians,23,runs
+458,Kolkata Knight Riders,Mumbai Indians,163,122,Kolkata Knight Riders,41,runs
+459,Delhi Daredevils,Royal Challengers Bangalore,145,146,Royal Challengers Bangalore,1,wickets
+460,Chennai Super Kings,Kings XI Punjab,205,206,Kings XI Punjab,1,wickets
+461,Sunrisers Hyderabad,Rajasthan Royals,133,135,Rajasthan Royals,2,wickets
+462,Mumbai Indians,Royal Challengers Bangalore,115,116,Royal Challengers Bangalore,1,wickets
+463,Kolkata Knight Riders,Delhi Daredevils,166,167,Delhi Daredevils,1,wickets
+464,Rajasthan Royals,Kings XI Punjab,191,193,Kings XI Punjab,2,wickets
+465,Chennai Super Kings,Delhi Daredevils,177,84,Chennai Super Kings,93,runs
+466,Kings XI Punjab,Sunrisers Hyderabad,193,121,Kings XI Punjab,72,runs
+467,Chennai Super Kings,Rajasthan Royals,140,133,Chennai Super Kings,7,runs
+468,Kolkata Knight Riders,Royal Challengers Bangalore,150,148,Kolkata Knight Riders,2,runs
+469,Sunrisers Hyderabad,Delhi Daredevils,184,180,Sunrisers Hyderabad,4,runs
+470,Mumbai Indians,Chennai Super Kings,141,142,Chennai Super Kings,1,wickets
+471,Royal Challengers Bangalore,Rajasthan Royals,70,71,Rajasthan Royals,1,wickets
+472,Kings XI Punjab,Kolkata Knight Riders,132,109,Kings XI Punjab,23,runs
+473,Mumbai Indians,Delhi Daredevils,125,126,Delhi Daredevils,1,wickets
+474,Sunrisers Hyderabad,Chennai Super Kings,145,146,Chennai Super Kings,1,wickets
+475,Royal Challengers Bangalore,Kings XI Punjab,124,127,Kings XI Punjab,3,wickets
+476,Rajasthan Royals,Kolkata Knight Riders,152,152,Draw,0,draw
+477,Sunrisers Hyderabad,Mumbai Indians,172,157,Sunrisers Hyderabad,15,runs
+478,Chennai Super Kings,Kolkata Knight Riders,148,114,Chennai Super Kings,34,runs
+479,Kings XI Punjab,Mumbai Indians,168,170,Mumbai Indians,2,wickets
+480,Delhi Daredevils,Rajasthan Royals,152,156,Rajasthan Royals,4,wickets
+481,Sunrisers Hyderabad,Royal Challengers Bangalore,155,158,Royal Challengers Bangalore,3,wickets
+482,Rajasthan Royals,Kolkata Knight Riders,170,160,Rajasthan Royals,10,runs
+483,Delhi Daredevils,Chennai Super Kings,178,181,Chennai Super Kings,3,wickets
+484,Mumbai Indians,Royal Challengers Bangalore,187,168,Mumbai Indians,19,runs
+485,Delhi Daredevils,Kolkata Knight Riders,160,161,Kolkata Knight Riders,1,wickets
+486,Kings XI Punjab,Chennai Super Kings,231,187,Kings XI Punjab,44,runs
+487,Sunrisers Hyderabad,Rajasthan Royals,134,102,Sunrisers Hyderabad,32,runs
+488,Kings XI Punjab,Royal Challengers Bangalore,198,166,Kings XI Punjab,32,runs
+489,Delhi Daredevils,Sunrisers Hyderabad,143,44,Delhi Daredevils,99,runs
+490,Mumbai Indians,Chennai Super Kings,157,160,Chennai Super Kings,3,wickets
+491,Kings XI Punjab,Kolkata Knight Riders,149,150,Kolkata Knight Riders,1,wickets
+492,Royal Challengers Bangalore,Rajasthan Royals,190,191,Rajasthan Royals,1,wickets
+493,Sunrisers Hyderabad,Mumbai Indians,157,160,Mumbai Indians,3,wickets
+494,Rajasthan Royals,Chennai Super Kings,148,149,Chennai Super Kings,1,wickets
+495,Royal Challengers Bangalore,Delhi Daredevils,186,170,Royal Challengers Bangalore,16,runs
+496,Sunrisers Hyderabad,Kings XI Punjab,205,211,Kings XI Punjab,6,wickets
+497,Mumbai Indians,Kolkata Knight Riders,141,142,Kolkata Knight Riders,1,wickets
+498,Rajasthan Royals,Delhi Daredevils,201,139,Rajasthan Royals,62,runs
+499,Chennai Super Kings,Royal Challengers Bangalore,138,142,Royal Challengers Bangalore,4,wickets
+500,Sunrisers Hyderabad,Kolkata Knight Riders,142,146,Kolkata Knight Riders,4,wickets
+501,Mumbai Indians,Rajasthan Royals,178,153,Mumbai Indians,25,runs
+502,Delhi Daredevils,Kings XI Punjab,164,165,Kings XI Punjab,1,wickets
+503,Royal Challengers Bangalore,Sunrisers Hyderabad,160,161,Sunrisers Hyderabad,1,wickets
+504,Chennai Super Kings,Kolkata Knight Riders,154,156,Kolkata Knight Riders,2,wickets
+505,Kings XI Punjab,Mumbai Indians,156,159,Mumbai Indians,3,wickets
+506,Kolkata Knight Riders,Royal Challengers Bangalore,195,165,Kolkata Knight Riders,30,runs
+507,Chennai Super Kings,Sunrisers Hyderabad,185,189,Sunrisers Hyderabad,4,wickets
+508,Mumbai Indians,Delhi Daredevils,173,158,Mumbai Indians,15,runs
+509,Kings XI Punjab,Rajasthan Royals,179,163,Kings XI Punjab,16,runs
+510,Royal Challengers Bangalore,Chennai Super Kings,154,160,Chennai Super Kings,6,wickets
+511,Sunrisers Hyderabad,Kolkata Knight Riders,160,161,Kolkata Knight Riders,1,wickets
+512,Delhi Daredevils,Kings XI Punjab,115,119,Kings XI Punjab,4,wickets
+513,Rajasthan Royals,Mumbai Indians,189,195,Mumbai Indians,6,wickets
+514,Kolkata Knight Riders,Kings XI Punjab,163,135,Kolkata Knight Riders,28,runs
+515,Mumbai Indians,Chennai Super Kings,173,176,Chennai Super Kings,3,wickets
+516,Kings XI Punjab,Chennai Super Kings,226,202,Kings XI Punjab,24,runs
+517,Kings XI Punjab,Kolkata Knight Riders,199,200,Kolkata Knight Riders,1,wickets
+518,Mumbai Indians,Kolkata Knight Riders,168,170,Kolkata Knight Riders,2,wickets
+519,Chennai Super Kings,Delhi Daredevils,150,149,Chennai Super Kings,1,runs
+520,Rajasthan Royals,Kings XI Punjab,162,136,Rajasthan Royals,26,runs
+521,Chennai Super Kings,Sunrisers Hyderabad,209,164,Chennai Super Kings,45,runs
+522,Kolkata Knight Riders,Royal Challengers Bangalore,177,179,Royal Challengers Bangalore,2,wickets
+523,Delhi Daredevils,Rajasthan Royals,184,186,Rajasthan Royals,2,wickets
+524,Kings XI Punjab,Mumbai Indians,177,159,Kings XI Punjab,18,runs
+525,Royal Challengers Bangalore,Sunrisers Hyderabad,166,172,Sunrisers Hyderabad,6,wickets
+526,Mumbai Indians,Rajasthan Royals,164,165,Rajasthan Royals,1,wickets
+527,Chennai Super Kings,Kolkata Knight Riders,165,169,Kolkata Knight Riders,4,wickets
+528,Kings XI Punjab,Delhi Daredevils,165,169,Delhi Daredevils,4,wickets
+529,Sunrisers Hyderabad,Rajasthan Royals,127,131,Rajasthan Royals,4,wickets
+530,Mumbai Indians,Chennai Super Kings,183,189,Chennai Super Kings,6,wickets
+531,Delhi Daredevils,Sunrisers Hyderabad,167,163,Delhi Daredevils,4,runs
+532,Kings XI Punjab,Kolkata Knight Riders,155,159,Kolkata Knight Riders,4,wickets
+533,Chennai Super Kings,Rajasthan Royals,156,157,Rajasthan Royals,1,wickets
+534,Mumbai Indians,Royal Challengers Bangalore,209,191,Mumbai Indians,18,runs
+535,Delhi Daredevils,Kolkata Knight Riders,146,147,Kolkata Knight Riders,1,wickets
+536,Rajasthan Royals,Kings XI Punjab,191,191,Draw,0,draw
+537,Sunrisers Hyderabad,Kolkata Knight Riders,176,101,Sunrisers Hyderabad,75,runs
+538,Chennai Super Kings,Royal Challengers Bangalore,181,154,Chennai Super Kings,27,runs
+539,Delhi Daredevils,Mumbai Indians,190,153,Delhi Daredevils,37,runs
+540,Rajasthan Royals,Royal Challengers Bangalore,130,134,Royal Challengers Bangalore,4,wickets
+541,Mumbai Indians,Sunrisers Hyderabad,157,137,Mumbai Indians,20,runs
+542,Chennai Super Kings,Kings XI Punjab,192,95,Chennai Super Kings,97,runs
+543,Delhi Daredevils,Royal Challengers Bangalore,95,99,Royal Challengers Bangalore,4,wickets
+544,Sunrisers Hyderabad,Kings XI Punjab,150,130,Sunrisers Hyderabad,20,runs
+545,Kolkata Knight Riders,Delhi Daredevils,171,158,Kolkata Knight Riders,13,runs
+547,Chennai Super Kings,Kolkata Knight Riders,134,132,Chennai Super Kings,2,runs
+548,Kings XI Punjab,Delhi Daredevils,118,119,Delhi Daredevils,1,wickets
+549,Mumbai Indians,Rajasthan Royals,187,179,Mumbai Indians,8,runs
+550,Kolkata Knight Riders,Royal Challengers Bangalore,111,115,Royal Challengers Bangalore,4,wickets
+551,Sunrisers Hyderabad,Chennai Super Kings,192,170,Sunrisers Hyderabad,22,runs
+552,Mumbai Indians,Kings XI Punjab,172,149,Mumbai Indians,23,runs
+553,Rajasthan Royals,Delhi Daredevils,189,175,Rajasthan Royals,14,runs
+554,Chennai Super Kings,Royal Challengers Bangalore,148,124,Chennai Super Kings,24,runs
+555,Kolkata Knight Riders,Sunrisers Hyderabad,167,132,Kolkata Knight Riders,35,runs
+556,Delhi Daredevils,Mumbai Indians,152,153,Mumbai Indians,1,wickets
+557,Royal Challengers Bangalore,Kings XI Punjab,226,88,Royal Challengers Bangalore,138,runs
+558,Sunrisers Hyderabad,Rajasthan Royals,201,194,Sunrisers Hyderabad,7,runs
+559,Chennai Super Kings,Mumbai Indians,158,159,Mumbai Indians,1,wickets
+560,Kings XI Punjab,Kolkata Knight Riders,183,184,Kolkata Knight Riders,1,wickets
+561,Sunrisers Hyderabad,Delhi Daredevils,163,157,Sunrisers Hyderabad,6,runs
+562,Royal Challengers Bangalore,Mumbai Indians,235,196,Royal Challengers Bangalore,39,runs
+563,Chennai Super Kings,Rajasthan Royals,157,145,Chennai Super Kings,12,runs
+564,Sunrisers Hyderabad,Kings XI Punjab,185,180,Sunrisers Hyderabad,5,runs
+565,Chennai Super Kings,Delhi Daredevils,119,120,Delhi Daredevils,1,wickets
+566,Kings XI Punjab,Royal Challengers Bangalore,106,84,Kings XI Punjab,22,runs
+567,Mumbai Indians,Kolkata Knight Riders,171,166,Mumbai Indians,5,runs
+568,Sunrisers Hyderabad,Royal Challengers Bangalore,135,83,Sunrisers Hyderabad,52,runs
+569,Kings XI Punjab,Chennai Super Kings,130,134,Chennai Super Kings,4,wickets
+570,Rajasthan Royals,Kolkata Knight Riders,199,190,Rajasthan Royals,9,runs
+571,Delhi Daredevils,Royal Challengers Bangalore,187,2,Delhi Daredevils,185,runs
+572,Sunrisers Hyderabad,Mumbai Indians,113,114,Mumbai Indians,1,wickets
+573,Mumbai Indians,Chennai Super Kings,187,162,Mumbai Indians,25,runs
+574,Royal Challengers Bangalore,Rajasthan Royals,180,109,Royal Challengers Bangalore,71,runs
+575,Royal Challengers Bangalore,Chennai Super Kings,139,140,Chennai Super Kings,1,wickets
+576,Mumbai Indians,Chennai Super Kings,202,161,Mumbai Indians,41,runs
+577,Mumbai Indians,Rising Pune Supergiants,121,126,Rising Pune Supergiants,5,wickets
+578,Delhi Daredevils,Kolkata Knight Riders,98,99,Kolkata Knight Riders,1,wickets
+579,Kings XI Punjab,Gujarat Lions,161,162,Gujarat Lions,1,wickets
+580,Royal Challengers Bangalore,Sunrisers Hyderabad,227,182,Royal Challengers Bangalore,45,runs
+581,Kolkata Knight Riders,Mumbai Indians,187,188,Mumbai Indians,1,wickets
+582,Rising Pune Supergiants,Gujarat Lions,163,164,Gujarat Lions,1,wickets
+583,Kings XI Punjab,Delhi Daredevils,111,113,Delhi Daredevils,2,wickets
+584,Sunrisers Hyderabad,Kolkata Knight Riders,142,146,Kolkata Knight Riders,4,wickets
+585,Mumbai Indians,Gujarat Lions,143,147,Gujarat Lions,4,wickets
+586,Rising Pune Supergiants,Kings XI Punjab,152,153,Kings XI Punjab,1,wickets
+587,Royal Challengers Bangalore,Delhi Daredevils,191,192,Delhi Daredevils,1,wickets
+588,Mumbai Indians,Sunrisers Hyderabad,142,145,Sunrisers Hyderabad,3,wickets
+589,Kings XI Punjab,Kolkata Knight Riders,138,141,Kolkata Knight Riders,3,wickets
+590,Royal Challengers Bangalore,Mumbai Indians,170,171,Mumbai Indians,1,wickets
+591,Gujarat Lions,Sunrisers Hyderabad,135,137,Sunrisers Hyderabad,2,wickets
+592,Royal Challengers Bangalore,Rising Pune Supergiants,185,172,Royal Challengers Bangalore,13,runs
+593,Delhi Daredevils,Mumbai Indians,164,154,Delhi Daredevils,10,runs
+594,Kings XI Punjab,Sunrisers Hyderabad,143,146,Sunrisers Hyderabad,3,wickets
+595,Royal Challengers Bangalore,Gujarat Lions,180,182,Gujarat Lions,2,wickets
+596,Rising Pune Supergiants,Kolkata Knight Riders,160,162,Kolkata Knight Riders,2,wickets
+597,Mumbai Indians,Kings XI Punjab,189,164,Mumbai Indians,25,runs
+598,Sunrisers Hyderabad,Rising Pune Supergiants,118,94,Sunrisers Hyderabad,24,runs
+599,Gujarat Lions,Delhi Daredevils,172,171,Gujarat Lions,1,runs
+600,Kolkata Knight Riders,Mumbai Indians,174,178,Mumbai Indians,4,wickets
+601,Rising Pune Supergiants,Gujarat Lions,195,196,Gujarat Lions,1,wickets
+602,Delhi Daredevils,Kolkata Knight Riders,186,159,Delhi Daredevils,27,runs
+603,Sunrisers Hyderabad,Royal Challengers Bangalore,194,179,Sunrisers Hyderabad,15,runs
+604,Kings XI Punjab,Gujarat Lions,154,131,Kings XI Punjab,23,runs
+605,Rising Pune Supergiants,Mumbai Indians,159,161,Mumbai Indians,2,wickets
+606,Royal Challengers Bangalore,Kolkata Knight Riders,185,189,Kolkata Knight Riders,4,wickets
+607,Gujarat Lions,Delhi Daredevils,149,150,Delhi Daredevils,1,wickets
+608,Kolkata Knight Riders,Kings XI Punjab,164,157,Kolkata Knight Riders,7,runs
+609,Delhi Daredevils,Rising Pune Supergiants,162,166,Rising Pune Supergiants,4,wickets
+610,Gujarat Lions,Sunrisers Hyderabad,126,129,Sunrisers Hyderabad,3,wickets
+611,Rising Pune Supergiants,Royal Challengers Bangalore,191,195,Royal Challengers Bangalore,4,wickets
+612,Kings XI Punjab,Delhi Daredevils,181,172,Kings XI Punjab,9,runs
+613,Sunrisers Hyderabad,Mumbai Indians,177,92,Sunrisers Hyderabad,85,runs
+614,Kolkata Knight Riders,Gujarat Lions,158,164,Gujarat Lions,6,wickets
+615,Royal Challengers Bangalore,Kings XI Punjab,175,174,Royal Challengers Bangalore,1,runs
+616,Sunrisers Hyderabad,Rising Pune Supergiants,137,133,Sunrisers Hyderabad,4,runs
+617,Royal Challengers Bangalore,Mumbai Indians,151,153,Mumbai Indians,2,wickets
+618,Sunrisers Hyderabad,Delhi Daredevils,146,150,Delhi Daredevils,4,wickets
+619,Mumbai Indians,Kings XI Punjab,124,127,Kings XI Punjab,3,wickets
+620,Royal Challengers Bangalore,Gujarat Lions,248,104,Royal Challengers Bangalore,144,runs
+621,Rising Pune Supergiants,Kolkata Knight Riders,103,66,Rising Pune Supergiants,37,runs
+622,Kings XI Punjab,Sunrisers Hyderabad,179,180,Sunrisers Hyderabad,1,wickets
+623,Mumbai Indians,Delhi Daredevils,206,126,Mumbai Indians,80,runs
+624,Kolkata Knight Riders,Royal Challengers Bangalore,183,186,Royal Challengers Bangalore,3,wickets
+625,Delhi Daredevils,Rising Pune Supergiants,121,76,Delhi Daredevils,45,runs
+626,Royal Challengers Bangalore,Kings XI Punjab,211,120,Royal Challengers Bangalore,91,runs
+627,Kolkata Knight Riders,Gujarat Lions,124,125,Gujarat Lions,1,wickets
+628,Sunrisers Hyderabad,Delhi Daredevils,158,161,Delhi Daredevils,3,wickets
+629,Kings XI Punjab,Rising Pune Supergiants,172,173,Rising Pune Supergiants,1,wickets
+630,Mumbai Indians,Gujarat Lions,172,173,Gujarat Lions,1,wickets
+631,Kolkata Knight Riders,Sunrisers Hyderabad,171,149,Kolkata Knight Riders,22,runs
+632,Delhi Daredevils,Royal Challengers Bangalore,138,139,Royal Challengers Bangalore,1,wickets
+633,Gujarat Lions,Royal Challengers Bangalore,158,159,Royal Challengers Bangalore,1,wickets
+634,Sunrisers Hyderabad,Kolkata Knight Riders,162,140,Sunrisers Hyderabad,22,runs
+635,Gujarat Lions,Sunrisers Hyderabad,162,163,Sunrisers Hyderabad,1,wickets
+636,Sunrisers Hyderabad,Royal Challengers Bangalore,208,200,Sunrisers Hyderabad,8,runs
+7894,Mumbai Indians,Chennai Super Kings,169,176,Chennai Super Kings,7,wickets
+7895,Delhi Daredevils,Kings XI Punjab,172,168,Delhi Daredevils,4,runs
+7896,Royal Challengers Bangalore,Kolkata Knight Riders,182,190,Kolkata Knight Riders,8,wickets
+7897,Rajasthan Royals,Sunrisers Hyderabad,133,135,Sunrisers Hyderabad,2,wickets
+7898,Kolkata Knight Riders,Chennai Super Kings,207,212,Chennai Super Kings,5,wickets
+7899,Rajasthan Royals,Delhi Daredevils,156,63,Rajasthan Royals,93,runs
+7900,Mumbai Indians,Sunrisers Hyderabad,155,155,Draw,0,draw
+7901,Kings XI Punjab,Royal Challengers Bangalore,161,163,Royal Challengers Bangalore,2,wickets
+7902,Mumbai Indians,Delhi Daredevils,204,197,Mumbai Indians,7,runs
+7903,Kolkata Knight Riders,Sunrisers Hyderabad,145,144,Kolkata Knight Riders,1,runs
+7904,Rajasthan Royals,Royal Challengers Bangalore,231,204,Rajasthan Royals,27,runs
+7905,Kings XI Punjab,Chennai Super Kings,198,206,Chennai Super Kings,8,wickets
+7906,Kolkata Knight Riders,Delhi Daredevils,206,136,Kolkata Knight Riders,70,runs
+7907,Mumbai Indians,Royal Challengers Bangalore,230,173,Mumbai Indians,57,runs
+7908,Rajasthan Royals,Kolkata Knight Riders,165,166,Kolkata Knight Riders,1,wickets
+7909,Kings XI Punjab,Sunrisers Hyderabad,201,191,Kings XI Punjab,10,runs
+7910,Chennai Super Kings,Rajasthan Royals,210,148,Chennai Super Kings,62,runs
+7911,Kolkata Knight Riders,Kings XI Punjab,200,128,Kolkata Knight Riders,72,runs
+7912,Delhi Daredevils,Royal Challengers Bangalore,186,180,Delhi Daredevils,6,runs
+7913,Chennai Super Kings,Sunrisers Hyderabad,186,180,Chennai Super Kings,6,runs
+7914,Mumbai Indians,Rajasthan Royals,172,174,Rajasthan Royals,2,wickets
+7915,Kings XI Punjab,Delhi Daredevils,157,148,Kings XI Punjab,9,runs
+7916,Sunrisers Hyderabad,Mumbai Indians,130,89,Sunrisers Hyderabad,41,runs
+7917,Royal Challengers Bangalore,Chennai Super Kings,213,218,Chennai Super Kings,5,wickets
+7918,Sunrisers Hyderabad,Kings XI Punjab,140,121,Sunrisers Hyderabad,19,runs
+7919,Delhi Daredevils,Kolkata Knight Riders,223,168,Delhi Daredevils,55,runs
+7920,Chennai Super Kings,Mumbai Indians,176,180,Mumbai Indians,4,wickets
+7921,Sunrisers Hyderabad,Rajasthan Royals,152,141,Sunrisers Hyderabad,11,runs
+7922,Royal Challengers Bangalore,Kolkata Knight Riders,185,184,Royal Challengers Bangalore,1,runs
+7923,Chennai Super Kings,Delhi Daredevils,218,206,Chennai Super Kings,12,runs
+7924,Royal Challengers Bangalore,Mumbai Indians,173,176,Mumbai Indians,3,wickets
+7925,Delhi Daredevils,Rajasthan Royals,203,150,Delhi Daredevils,53,runs
+7926,Chennai Super Kings,Kolkata Knight Riders,184,192,Kolkata Knight Riders,8,wickets
+7927,Kings XI Punjab,Mumbai Indians,184,182,Kings XI Punjab,2,runs
+7928,Royal Challengers Bangalore,Chennai Super Kings,131,135,Chennai Super Kings,4,wickets
+7929,Delhi Daredevils,Sunrisers Hyderabad,166,170,Sunrisers Hyderabad,4,wickets
+7930,Mumbai Indians,Kolkata Knight Riders,187,177,Mumbai Indians,10,runs
+7931,Rajasthan Royals,Kings XI Punjab,160,158,Rajasthan Royals,2,runs
+7932,Sunrisers Hyderabad,Royal Challengers Bangalore,155,146,Sunrisers Hyderabad,9,runs
+7933,Rajasthan Royals,Kings XI Punjab,161,149,Rajasthan Royals,12,runs
+7934,Mumbai Indians,Kolkata Knight Riders,217,109,Mumbai Indians,108,runs
+7935,Delhi Daredevils,Sunrisers Hyderabad,190,193,Sunrisers Hyderabad,3,wickets
+7936,Chennai Super Kings,Rajasthan Royals,188,180,Chennai Super Kings,8,runs
+7937,Kolkata Knight Riders,Kings XI Punjab,250,221,Kolkata Knight Riders,29,runs
+7938,Delhi Daredevils,Royal Challengers Bangalore,188,198,Royal Challengers Bangalore,10,wickets
+7939,Sunrisers Hyderabad,Chennai Super Kings,192,181,Sunrisers Hyderabad,11,runs
+7940,Mumbai Indians,Rajasthan Royals,177,181,Rajasthan Royals,4,wickets
+7941,Kings XI Punjab,Royal Challengers Bangalore,93,96,Royal Challengers Bangalore,3,wickets
+7942,Rajasthan Royals,Kolkata Knight Riders,144,147,Kolkata Knight Riders,3,wickets
+7943,Mumbai Indians,Kings XI Punjab,197,192,Mumbai Indians,5,runs
+7944,Royal Challengers Bangalore,Sunrisers Hyderabad,222,209,Royal Challengers Bangalore,13,runs
+7945,Delhi Daredevils,Chennai Super Kings,171,130,Delhi Daredevils,41,runs
+7946,Rajasthan Royals,Royal Challengers Bangalore,174,137,Rajasthan Royals,37,runs
+7947,Sunrisers Hyderabad,Kolkata Knight Riders,183,180,Sunrisers Hyderabad,3,runs
+7948,Delhi Daredevils,Mumbai Indians,186,170,Delhi Daredevils,16,runs
+7949,Kings XI Punjab,Chennai Super Kings,164,168,Chennai Super Kings,4,wickets
+7950,Sunrisers Hyderabad,Chennai Super Kings,148,145,Sunrisers Hyderabad,3,runs
+7951,Kolkata Knight Riders,Rajasthan Royals,179,145,Kolkata Knight Riders,34,runs
+7952,Sunrisers Hyderabad,Kolkata Knight Riders,179,163,Sunrisers Hyderabad,16,runs
+7953,Sunrisers Hyderabad,Chennai Super Kings,186,187,Chennai Super Kings,1,wickets
+11137,Royal Challengers Bangalore,Chennai Super Kings,74,76,Chennai Super Kings,2,wickets
+11138,Sunrisers Hyderabad,Kolkata Knight Riders,189,187,Sunrisers Hyderabad,2,runs
+11139,Delhi Capitals,Mumbai Indians,219,185,Delhi Capitals,34,runs
+11140,Kings XI Punjab,Rajasthan Royals,200,175,Kings XI Punjab,25,runs
+11141,Delhi Capitals,Chennai Super Kings,154,157,Chennai Super Kings,3,wickets
+11142,Kolkata Knight Riders,Kings XI Punjab,223,196,Kolkata Knight Riders,27,runs
+11143,Mumbai Indians,Royal Challengers Bangalore,197,186,Mumbai Indians,11,runs
+11144,Rajasthan Royals,Sunrisers Hyderabad,203,211,Sunrisers Hyderabad,8,wickets
+11145,Mumbai Indians,Kings XI Punjab,187,185,Mumbai Indians,2,runs
+11146,Kolkata Knight Riders,Delhi Capitals,193,189,Kolkata Knight Riders,4,runs
+11147,Sunrisers Hyderabad,Royal Challengers Bangalore,233,120,Sunrisers Hyderabad,113,runs
+11148,Chennai Super Kings,Rajasthan Royals,182,174,Chennai Super Kings,8,runs
+11149,Kings XI Punjab,Delhi Capitals,175,163,Kings XI Punjab,12,runs
+11150,Royal Challengers Bangalore,Rajasthan Royals,164,174,Rajasthan Royals,10,wickets
+11151,Mumbai Indians,Chennai Super Kings,176,147,Mumbai Indians,29,runs
+11152,Delhi Capitals,Sunrisers Hyderabad,134,142,Sunrisers Hyderabad,8,wickets
+11153,Royal Challengers Bangalore,Kolkata Knight Riders,210,219,Kolkata Knight Riders,9,wickets
+11309,Chennai Super Kings,Kings XI Punjab,165,142,Chennai Super Kings,23,runs
+11310,Mumbai Indians,Sunrisers Hyderabad,142,102,Mumbai Indians,40,runs
+11311,Royal Challengers Bangalore,Delhi Capitals,154,164,Delhi Capitals,10,wickets
+11312,Rajasthan Royals,Kolkata Knight Riders,150,151,Kolkata Knight Riders,1,wickets
+11313,Sunrisers Hyderabad,Kings XI Punjab,158,152,Sunrisers Hyderabad,6,runs
+11314,Kolkata Knight Riders,Chennai Super Kings,114,119,Chennai Super Kings,5,wickets
+11315,Kings XI Punjab,Mumbai Indians,204,210,Mumbai Indians,6,wickets
+11316,Rajasthan Royals,Chennai Super Kings,158,164,Chennai Super Kings,6,wickets
+11317,Kolkata Knight Riders,Delhi Capitals,183,183,Draw,0,draw
+11318,Mumbai Indians,Rajasthan Royals,191,192,Rajasthan Royals,1,wickets
+11319,Kings XI Punjab,Royal Challengers Bangalore,180,175,Kings XI Punjab,5,runs
+11320,Kolkata Knight Riders,Chennai Super Kings,170,164,Kolkata Knight Riders,6,runs
+11321,Delhi Capitals,Sunrisers Hyderabad,164,121,Delhi Capitals,43,runs
+11322,Royal Challengers Bangalore,Mumbai Indians,179,179,Draw,0,draw
+11323,Kings XI Punjab,Rajasthan Royals,190,180,Kings XI Punjab,10,runs
+11324,Chennai Super Kings,Sunrisers Hyderabad,139,140,Sunrisers Hyderabad,1,wickets
+11325,Mumbai Indians,Delhi Capitals,174,136,Mumbai Indians,38,runs
+11326,Royal Challengers Bangalore,Kolkata Knight Riders,219,219,Draw,0,draw
+11327,Mumbai Indians,Rajasthan Royals,171,168,Mumbai Indians,3,runs
+11328,Kings XI Punjab,Delhi Capitals,168,177,Delhi Capitals,9,wickets
+11329,Kolkata Knight Riders,Sunrisers Hyderabad,164,167,Sunrisers Hyderabad,3,wickets
+11330,Royal Challengers Bangalore,Chennai Super Kings,165,172,Chennai Super Kings,7,wickets
+11331,Rajasthan Royals,Delhi Capitals,196,194,Rajasthan Royals,2,runs
+11332,Sunrisers Hyderabad,Chennai Super Kings,179,185,Chennai Super Kings,6,wickets
+11333,Royal Challengers Bangalore,Kings XI Punjab,213,190,Royal Challengers Bangalore,23,runs
+11334,Kolkata Knight Riders,Rajasthan Royals,185,182,Kolkata Knight Riders,3,runs
+11335,Mumbai Indians,Chennai Super Kings,159,116,Mumbai Indians,43,runs
+11336,Sunrisers Hyderabad,Rajasthan Royals,169,167,Sunrisers Hyderabad,2,runs
+11337,Delhi Capitals,Royal Challengers Bangalore,193,176,Delhi Capitals,17,runs
+11338,Kolkata Knight Riders,Mumbai Indians,241,204,Kolkata Knight Riders,37,runs
+11339,Sunrisers Hyderabad,Kings XI Punjab,232,174,Sunrisers Hyderabad,58,runs
+11340,Royal Challengers Bangalore,Rajasthan Royals,65,42,Royal Challengers Bangalore,23,runs
+11341,Chennai Super Kings,Delhi Capitals,186,99,Chennai Super Kings,87,runs
+11342,Mumbai Indians,Sunrisers Hyderabad,170,165,Mumbai Indians,5,runs
+11343,Kings XI Punjab,Kolkata Knight Riders,186,192,Kolkata Knight Riders,6,wickets
+11344,Rajasthan Royals,Delhi Capitals,124,126,Delhi Capitals,2,wickets
+11345,Sunrisers Hyderabad,Royal Challengers Bangalore,179,187,Royal Challengers Bangalore,8,wickets
+11346,Chennai Super Kings,Kings XI Punjab,172,188,Kings XI Punjab,16,wickets
+11347,Kolkata Knight Riders,Mumbai Indians,143,137,Kolkata Knight Riders,6,runs
+11412,Chennai Super Kings,Mumbai Indians,136,140,Mumbai Indians,4,wickets
+11413,Sunrisers Hyderabad,Delhi Capitals,171,170,Sunrisers Hyderabad,1,runs
+11414,Delhi Capitals,Chennai Super Kings,155,162,Chennai Super Kings,7,wickets
+11415,Mumbai Indians,Chennai Super Kings,152,157,Chennai Super Kings,5,wickets
