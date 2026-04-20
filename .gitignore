@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+venv/
+.venv/
+
+tempCodeRunnerFile.*
+Untitled-*.py
+
+.ipynb_checkpoints/
+*.log
