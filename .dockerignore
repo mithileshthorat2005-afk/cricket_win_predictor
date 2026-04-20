@@ -1,0 +1,50 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.python-version
+venv
+env
+ENV
+.env
+
+# VS Code
+.vscode
+.vscode-server
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Data (exclude raw data, keep only processed if needed)
+data/raw/
+data/processed/
+# !data/processed/modeling_data.csv  # Uncomment if you need this
+
+# Logs
+logs/
+*.log
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Tests & notebooks
+tests/
+notebooks/
+reports/
+
+# Temp files
+*.tmp
+*.temp
+.cache
+
+# OS files
+.DS_Store
+Thumbs.db
