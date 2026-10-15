@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Win Probability</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <style>
+        body { background:#0f172a; color:#e2e8f0; font-family:Arial,sans-serif; padding:30px; }
+        .card { background:#1e293b; padding:20px; border-radius:12px; width:360px;
+                box-shadow:0 4px 20px rgba(0,0,0,.4); margin-bottom:16px; }
+        .prob-bar { height:22px; background:#334155; border-radius:11px; overflow:hidden; margin-top:8px; }
+        .prob-fill { height:100%; background:#22c55e; transition:width .4s; text-align:center;
+                     font-size:13px; line-height:22px; color:#052e16; }
+        #log { background:#111827; padding:12px; border-radius:8px; font-size:13px;
+               max-height:260px; overflow-y:auto; white-space:pre-wrap; }
+        label { font-size:13px; color:#94a3b8; }
+        input, button { padding:6px; border-radius:6px; border:1px solid #334155;
+                        background:#0f172a; color:#e2e8f0; }
+        .row { display:flex; gap:8px; margin-top:8px; align-items:center; }
+    </style>
+</head>
+<body>
+<h1>🏏 Cricket Win Probability (live via STOMP)</h1>
+
+<div class="card">
+    <div>Match <b id="matchId">–</b> · Innings <b id="inning">–</b></div>
+    <h2 id="teams">Waiting for updates…</h2>
+    <h1 id="score">0/0</h1>
+    <h3 id="overs">0.0 overs</h3>
+    <div>Win probability (batting team)</div>
+    <div class="prob-bar"><div class="prob-fill" id="probFill" style="width:0%">–</div></div>
+    <div class="row">
+        <label>Match ID</label><input id="inputMatchId" size="6" placeholder="e.g. 1">
+        <button onclick="subscribe()">Subscribe</button>
+    </div>
+</div>
+
+<div class="card">
+    <b>Event log</b>
+    <div id="log">Connecting…</div>
+</div>
+
+<script>
+    const log = m => {
+        const el = document.getElementById('log');
+        el.textContent = new Date().toLocaleTimeString() + '  ' + m + '\n' + el.textContent;
+    };
+    let subscribed = null;
+
+    const socket = new SockJS('/ws');
+    const stomp = Stomp.over(socket);
+    stomp.debug = null;
+
+    stomp.connect({}, () => {
+        log('Connected to /ws (STOMP)');
+    }, err => log('Connection error: ' + err));
+
+    function subscribe() {
+        const id = document.getElementById('inputMatchId').value.trim();
+        if (!id) { log('Enter a match id first'); return; }
+        if (subscribed) subscribed.forEach(s => s.unsubscribe());
+
+        document.getElementById('matchId').innerText = id;
+        subscribed = [
+            stomp.subscribe('/topic/match/' + id + '/score', msg => {
+                const d = JSON.parse(msg.body);
+                document.getElementById('teams').innerText = d.battingTeam;
+                document.getElementById('score').innerText = d.runs + '/' + d.wickets;
+                document.getElementById('overs').innerText = d.oversCompleted + ' overs (v' + d.stateVersion + ')';
+                document.getElementById('inning').innerText = d.inning;
+                log('SCORE ' + d.runs + '/' + d.wickets + ' @ ' + d.oversCompleted + ' (v' + d.stateVersion + ')');
+            }),
+            stomp.subscribe('/topic/match/' + id + '/prob', msg => {
+                const d = JSON.parse(msg.body);
+                if (d.winProbability !== null && d.winProbability !== undefined) {
+                    const pct = (d.winProbability * 100).toFixed(1) + '%';
+                    const fill = document.getElementById('probFill');
+                    fill.style.width = pct;
+                    fill.textContent = pct + ' (' + d.modelType + ', v' + d.stateVersion + ')';
+                    log('PROB ' + pct + ' ' + d.modelType + ' in ' + d.latencyMs + 'ms');
+                } else {
+                    log('SCORE PREDICTION: ' + d.predictedScore + ' (montecarlo, v' + d.stateVersion + ')');
+                }
+            }),
+            stomp.subscribe('/topic/match/' + id + '/ball', msg => {
+                const d = JSON.parse(msg.body);
+                log('BALL over ' + d.over + '.' + d.ball + ' ' + d.striker + ' ' + d.runs + (d.wicket ? ' WICKET!' : ''));
+            })
+        ];
+        log('Subscribed to /topic/match/' + id + '/{score,prob,ball}');
+    }
+</script>
+</body>
+</html>

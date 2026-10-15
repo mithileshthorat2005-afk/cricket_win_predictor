@@ -1,0 +1,93 @@
+# ============================================================
+# PRODUCTION stack for a single EC2 instance.
+#
+# Differences vs the dev docker-compose.yml:
+#   - MySQL and Redis are NOT published on any host port
+#     (only reachable by the backend container over the internal network)
+#   - only the Spring Boot API (8080) is published; FastAPI stays internal
+#   - all secrets come from .env (never committed)
+#
+# Usage:
+#   cp .env.example .env      # then edit real values
+#   docker compose -f deploy/docker-compose.prod.yml up -d --build
+# ============================================================
+services:
+
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD in .env}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-cricket}
+      MYSQL_USER: ${MYSQL_USER:-cricket}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env}
+    # No `ports:` on purpose - not reachable from the internet.
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    # No `ports:` on purpose - not reachable from the internet.
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  fastapi:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    # Internal only: the backend reaches it at http://fastapi:8000.
+    # Add `ports:` temporarily if you need to debug it from outside.
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health', timeout=4).status==200 else 1)"]
+      interval: 15s
+      timeout: 5s
+      start_period: 60s
+      retries: 5
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:8080"          # the ONLY public port (lock it down in the SG)
+    environment:
+      FASTAPI_BASE_URL: http://fastapi:8000
+      MYSQL_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-cricket}
+      MYSQL_USER: ${MYSQL_USER:-cricket}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env}
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      COMMENTARY_ENABLED: "false"        # Ollama is not part of this stack
+      PREDICTION_DEFAULT_MODEL: ${PREDICTION_DEFAULT_MODEL:-xgboost}
+      PREDICTION_MC_SIMULATIONS: ${PREDICTION_MC_SIMULATIONS:-300}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      fastapi:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/localhost/8080 && echo -e 'GET /actuator/health HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3 && grep -q UP <(&3)"]
+      interval: 15s
+      timeout: 5s
+      start_period: 60s
+      retries: 5
+
+volumes:
+  mysql-data:
+  redis-data:

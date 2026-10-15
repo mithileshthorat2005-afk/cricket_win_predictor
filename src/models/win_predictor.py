@@ -339,6 +339,11 @@ class CricketWinPredictor:
         
         joblib.dump(best_model, f'models/best_{best_model_name}_model.pkl')
         joblib.dump(self.scaler, 'models/scaler.pkl')
+
+        # Fit team encoder on the actual teams before saving so API
+        # validation (team_encoder.classes_) works after a retrain
+        teams = pd.concat([self.data['batting_team'], self.data['bowling_team']]).dropna().unique()
+        self.team_encoder.fit(sorted(teams))
         joblib.dump(self.team_encoder, 'models/team_encoder.pkl')
         
         print(f"\n💾 Saved best model: {best_model_name}")

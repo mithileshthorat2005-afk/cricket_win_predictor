@@ -1,0 +1,67 @@
+# ============================================================
+# Local development stack: MySQL + Redis + FastAPI ML + Spring Boot
+# Start:  docker compose up --build
+# Stop:   docker compose down        (add -v to wipe MySQL data)
+# ============================================================
+services:
+
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-cricket}
+      MYSQL_USER: ${MYSQL_USER:-cricket}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-cricket}
+    ports:
+      - "3306:3306"           # localhost only in dev; not needed in prod
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-root}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"           # localhost only in dev; not needed in prod
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    # No persistent volume needed: model artifacts are baked into the image.
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      # Container-to-container addresses (service names, not localhost)
+      FASTAPI_BASE_URL: http://fastapi:8000
+      MYSQL_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-cricket}
+      MYSQL_USER: ${MYSQL_USER:-cricket}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-cricket}
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      COMMENTARY_ENABLED: "false"        # Ollama is not part of this stack
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      fastapi:
+        condition: service_started
+
+volumes:
+  mysql-data:
