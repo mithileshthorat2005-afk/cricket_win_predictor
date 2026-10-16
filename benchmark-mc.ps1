@@ -31,11 +31,19 @@ function Bench($label, $body, $runs) {
         -f $label, $times[0], $median, $avg, $min, $max, $runs)
 }
 
+function WithSims($bodyJson, $sims) {
+    $o = $bodyJson | ConvertFrom-Json
+    $o | Add-Member -NotePropertyName n_simulations -NotePropertyValue $sims -Force
+    return ($o | ConvertTo-Json -Depth 4)
+}
+
 Write-Host "`n== n_simulations = 50 =="
-Bench "2nd innings (win prob)" $base 5
+Bench "2nd innings (win prob)" (WithSims $base 50) 5
 Write-Host "== n_simulations = 300 =="
-Bench "2nd innings (win prob)" $base 5
+Bench "2nd innings (win prob)" (WithSims $base 300) 5
 Write-Host "== n_simulations = 1000 =="
+Bench "2nd innings (win prob)" (WithSims $base 1000) 3
+Write-Host "== n_simulations = 500 (API default) =="
 Bench "2nd innings (win prob)" $base 3
 
 $first = @{
@@ -44,6 +52,6 @@ $first = @{
     striker = @{ name = "V Kohli"; runs = 40; balls = 30 }
 } | ConvertTo-Json -Depth 4
 Write-Host "== 1st innings (score prediction), n=300 =="
-Bench "1st innings (score)" $first 3
+Bench "1st innings (score)" (WithSims $first 300) 3
 
 Write-Host "`n(benchmark hits FastAPI directly; Spring Boot adds a single HTTP hop)" -ForegroundColor Yellow
