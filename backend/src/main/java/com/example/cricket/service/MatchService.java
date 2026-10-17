@@ -138,8 +138,14 @@ public class MatchService {
         if (allOut || oversDone || chasedDown) {
             innings.setCompleted(true);
             if (innings.getInningNumber() == 1) {
-                // First innings over: open the chase with target = total + 1
+                // First innings over: open the chase with target = total + 1 and
+                // materialise the innings-2 row now, so the post-commit getState()
+                // (and any auto-prediction) sees a valid current innings instead
+                // of throwing "No state yet".
                 match.setCurrentInnings(2);
+                inningsRepository.save(new Innings(
+                        match.getId(), 2, match.getTeam2(), match.getTeam1(),
+                        innings.getRuns() + 1));
             } else {
                 match.setStatus(Match.STATUS_COMPLETED);
             }

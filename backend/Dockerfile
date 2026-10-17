@@ -14,6 +14,6 @@ COPY --from=build /build/target/*.jar app.jar
 EXPOSE 8080
 
 HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=5 \
-    CMD bash -c 'exec 3<>/dev/tcp/localhost/8080 && echo -e "GET /actuator/health HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n" >&3 && grep -q "UP" <(&3)'
+    CMD curl -fsS http://localhost:8080/actuator/health || exit 1
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

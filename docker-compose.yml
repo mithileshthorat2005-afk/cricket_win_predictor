@@ -13,7 +13,10 @@ services:
       MYSQL_USER: ${MYSQL_USER:-cricket}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD:-cricket}
     ports:
-      - "3306:3306"           # localhost only in dev; not needed in prod
+      # Host port is overridable: a local MySQL service (e.g. Windows MySQL80)
+      # may already own 3306. Set MYSQL_HOST_PORT to free it. Container-internal
+      # connectivity (backend -> mysql:3306) is unaffected.
+      - "${MYSQL_HOST_PORT:-3306}:3306"   # localhost only in dev; not needed in prod
     volumes:
       - mysql-data:/var/lib/mysql
     healthcheck:
@@ -25,7 +28,8 @@ services:
   redis:
     image: redis:7-alpine
     ports:
-      - "6379:6379"           # localhost only in dev; not needed in prod
+      # Overridable for the same reason as MySQL: a local Redis may own 6379.
+      - "${REDIS_HOST_PORT:-6379}:6379"   # localhost only in dev; not needed in prod
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
@@ -45,7 +49,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      # Overridable: 8080 is a busy default (e.g. Oracle TNS Listener owns it here).
+      - "${BACKEND_HOST_PORT:-8080}:8080"
     environment:
       # Container-to-container addresses (service names, not localhost)
       FASTAPI_BASE_URL: http://fastapi:8000
@@ -55,6 +60,11 @@ services:
       REDIS_HOST: redis
       REDIS_PORT: "6379"
       COMMENTARY_ENABLED: "false"        # Ollama is not part of this stack
+      # Prediction behaviour (see .env.example). AUTO_ON_BALL=false skips the
+      # per-ball prediction call so ball ingestion stays fast; set true for live.
+      PREDICTION_DEFAULT_MODEL: ${PREDICTION_DEFAULT_MODEL:-xgboost}
+      PREDICTION_MC_SIMULATIONS: ${PREDICTION_MC_SIMULATIONS:-300}
+      PREDICTION_AUTO_ON_BALL: ${PREDICTION_AUTO_ON_BALL:-true}
     depends_on:
       mysql:
         condition: service_healthy

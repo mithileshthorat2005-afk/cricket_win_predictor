@@ -10,3 +10,6 @@ Untitled-*.py
 
 .ipynb_checkpoints/
 *.log
+
+# Scratch copy of the original ML project (not part of the codebase)
+cricket_win_predicter/
