@@ -42,7 +42,7 @@ and test runs — not against the (stale) README.
 | 4 | `/features` crashed — `xgb.Booster` has no `feature_importances_` | Endpoint call | ✅ Fixed via `get_score(importance_type='gain')`, normalized |
 | 5 | FastAPI `/predict` did **not** use the Monte Carlo engine; ~15 match-context features hardcoded to 0 | Source | ⚠️ Preserved as-is (backward compat); a real MC path was **added** as `/predict/montecarlo` |
 | 6 | No automated tests at all | Repo scan | ✅ 20 API tests added (FastAPI), 4 test classes (Spring Boot) |
-| 7 | README described "Day 1" status only | Read | ✅ Rewritten |
+| 7 | README described "Day 1" status only | Read | ✅ Rewritten (root `README.md` now documents the verified full-stack system) |
 
 ## 3. Architecture before the upgrade
 
