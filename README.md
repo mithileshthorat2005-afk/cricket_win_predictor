@@ -27,6 +27,7 @@ client ──► Spring Boot :8080 ──► FastAPI :8000 ──► models (XGB
 - [Real-time (WebSocket/STOMP)](#real-time-websocketstomp)
 - [Caching & staleness](#caching--staleness)
 - [Running with Docker Compose](#running-with-docker-compose)
+- [Architecture in depth](#architecture-in-depth)
 - [Verification & measured results](#verification--measured-results)
 - [Deployment](#deployment)
 - [Docs](#docs)
@@ -124,7 +125,51 @@ MYSQL_HOST_PORT=3307 REDIS_HOST_PORT=6380 BACKEND_HOST_PORT=8081 docker compose 
 ```
 
 Defaults and the prediction-tuning env vars are documented in
-[`.env.example`](.env.example). See [`docs/`](docs/) for a fuller compose guide.
+[`.env.example`](.env.example). Step-by-step cold start, operations and
+troubleshooting: [`docs/RUNNING.md`](docs/RUNNING.md).
+
+## Architecture in depth
+
+The full, code-referenced design lives in
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). The essentials:
+
+**Two services, one ownership boundary.** FastAPI owns all modeling (models,
+the 516-player DB, load-once lifecycle). Spring Boot owns match state,
+persistence, idempotency, caching, history and real-time push — and never
+re-implements a model; it calls FastAPI over HTTP. This is how the existing ML
+work was **preserved rather than rewritten**.
+
+**Staleness model = one integer.** `matches.state_version` increments on every
+accepted ball. A prediction snapshots this version *before* the (possibly slow)
+ML call, so it always remembers which match state it describes. Two guards use
+it: reads flag `state_version < live_version` as `"stale": true`, and the
+WebSocket publisher **drops** any probability computed from an older version so
+a slow Monte Carlo result can't overwrite a newer one on the live topic.
+
+**Idempotency rests on the database, not memory.** Deliveries carry a
+`UNIQUE (match_id, event_id)` constraint, so two concurrent submissions of the
+same ball cannot both commit — one wins, the other returns `duplicate: true`
+with the unchanged state. Runs are never double-counted.
+
+**Cache keys carry all prediction state.** The Redis prediction key embeds
+`stateVersion`, model, simulation count and batsman context, so two different
+match states can never collide on one cached entry. Every Redis call is wrapped
+to degrade to a cache miss; a prediction failure is never cached.
+
+**Graceful ML degradation.** Ingestion never fails because ML is down: the
+controller catches the error, sets `predictionError`, leaves `prediction:
+null`, and still returns the accepted ball. An explicit predict against a dead
+ML returns 503 — never a fabricated probability.
+
+```
+ball feed ─► Spring Boot ──► MySQL (state, idempotency, history)
+                │   │
+                │   └─► Redis  (state + prediction cache, versioned keys)
+                │
+                ├─► WebSocket/STOMP  (score, ball, prob — published post-commit)
+                │
+                └─► FastAPI  ──► XGBoost / Monte Carlo + 516-player DB
+```
 
 ## Verification & measured results
 
@@ -173,4 +218,7 @@ for a single EC2 instance," not "deployed to AWS." See [`deploy/README.md`](depl
 |---|---|
 | [`AUDIT.md`](AUDIT.md) | Pre-existing defects found in the original project (verified by execution) and how each was fixed |
 | [`README.api.md`](README.api.md) | Full, verified API contracts for both services + WebSocket topics |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | In-depth architecture: data model, ingestion/idempotency, staleness model, caching, real-time layer, request lifecycle |
+| [`docs/RUNNING.md`](docs/RUNNING.md) | Cold start, operations, port overrides, tuning, troubleshooting |
 | [`deploy/README.md`](deploy/README.md) | Deployment notes (scripts only) |
+| [`RESUME.md`](RESUME.md) | Resume/cover-letter blurb + claim-to-evidence table |
