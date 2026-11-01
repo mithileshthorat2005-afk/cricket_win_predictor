@@ -6,88 +6,238 @@
     <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
     <style>
         body { background:#0f172a; color:#e2e8f0; font-family:Arial,sans-serif; padding:30px; }
-        .card { background:#1e293b; padding:20px; border-radius:12px; width:360px;
+        .card { background:#1e293b; padding:20px; border-radius:12px; width:440px;
                 box-shadow:0 4px 20px rgba(0,0,0,.4); margin-bottom:16px; }
         .prob-bar { height:22px; background:#334155; border-radius:11px; overflow:hidden; margin-top:8px; }
         .prob-fill { height:100%; background:#22c55e; transition:width .4s; text-align:center;
-                     font-size:13px; line-height:22px; color:#052e16; }
+                     font-size:13px; line-height:22px; color:#052e16; white-space:nowrap; }
         #log { background:#111827; padding:12px; border-radius:8px; font-size:13px;
                max-height:260px; overflow-y:auto; white-space:pre-wrap; }
         label { font-size:13px; color:#94a3b8; }
-        input, button { padding:6px; border-radius:6px; border:1px solid #334155;
-                        background:#0f172a; color:#e2e8f0; }
-        .row { display:flex; gap:8px; margin-top:8px; align-items:center; }
+        input, button, select { padding:6px; border-radius:6px; border:1px solid #334155;
+                        background:#0f172a; color:#e2e8f0; font-size:13px; }
+        button { cursor:pointer; }
+        button:hover { border-color:#22c55e; }
+        .row { display:flex; gap:8px; margin-top:8px; align-items:center; flex-wrap:wrap; }
+        .hint { font-size:12px; color:#64748b; margin-top:6px; }
     </style>
 </head>
 <body>
-<h1>🏏 Cricket Win Probability (live via STOMP)</h1>
+<h1>&#127951; Cricket Win Probability (live via STOMP)</h1>
 
 <div class="card">
-    <div>Match <b id="matchId">–</b> · Innings <b id="inning">–</b></div>
-    <h2 id="teams">Waiting for updates…</h2>
-    <h1 id="score">0/0</h1>
-    <h3 id="overs">0.0 overs</h3>
+    <div>Match <b id="matchId">&ndash;</b> &middot; Innings <b id="inning">&ndash;</b></div>
+    <h2 id="teams">No match selected</h2>
+    <h1 id="score">&ndash;</h1>
+    <h3 id="overs">&ndash;</h3>
     <div>Win probability (batting team)</div>
-    <div class="prob-bar"><div class="prob-fill" id="probFill" style="width:0%">–</div></div>
+    <div class="prob-bar"><div class="prob-fill" id="probFill" style="width:0%">&ndash;</div></div>
     <div class="row">
-        <label>Match ID</label><input id="inputMatchId" size="6" placeholder="e.g. 1">
+        <label>Match ID</label><input id="inputMatchId" size="6" placeholder="e.g. 2">
         <button onclick="subscribe()">Subscribe</button>
+    </div>
+    <div class="hint">Subscribing loads the match's CURRENT state immediately,
+        then streams every new ball and prediction live.</div>
+</div>
+
+<div class="card">
+    <b>Demo controls (no terminal needed)</b>
+    <div class="row">
+        <select id="team1"></select> <span style="color:#64748b">vs</span> <select id="team2"></select>
+        <button onclick="newMatch()">+ New match</button>
+    </div>
+    <div class="row">
+        <button onclick="bowlBall()">&#9654; Bowl next ball</button>
+        <span class="hint">score + win probability update on every ball</span>
     </div>
 </div>
 
 <div class="card">
     <b>Event log</b>
-    <div id="log">Connecting…</div>
+    <div id="log">Connecting&hellip;</div>
 </div>
 
 <script>
+    // The 15 IPL teams the ML model actually knows.
+    const TEAMS = ["Chennai Super Kings","Deccan Chargers","Delhi Capitals","Delhi Daredevils",
+        "Gujarat Lions","Kings XI Punjab","Kochi Tuskers Kerala","Kolkata Knight Riders",
+        "Mumbai Indians","Pune Warriors","Rajasthan Royals","Rising Pune Supergiant",
+        "Rising Pune Supergiants","Royal Challengers Bangalore","Sunrisers Hyderabad"];
+    const BATSMEN = ["R Sharma","I Kishan","V Kohli","MS Dhoni","S Gill","H Pandya","D Warner","KL Rahul"];
+    const BOWLERS = ["T Boult","P Cummins","J Bumrah","R Jadeja","M Siraj","T Head"];
+
     const log = m => {
         const el = document.getElementById('log');
         el.textContent = new Date().toLocaleTimeString() + '  ' + m + '\n' + el.textContent;
     };
+    const pick = a => a[Math.floor(Math.random() * a.length)];
+
     let subscribed = null;
+    let lastState = null;   // latest known MatchStateResponse (from REST fetch or WS push)
+
+    // Fill the team dropdowns.
+    (function () {
+        const s1 = document.getElementById('team1'), s2 = document.getElementById('team2');
+        TEAMS.forEach(t => { s1.add(new Option(t, t)); s2.add(new Option(t, t)); });
+        s1.value = "Mumbai Indians"; s2.value = "Chennai Super Kings";
+    })();
+
+    // ---------- rendering (shared by REST snapshot and WS pushes) ----------
+
+    function paintState(d) {
+        lastState = Object.assign({}, lastState, d);   // WS score msgs are partial: merge
+        const s = lastState;
+        document.getElementById('matchId').innerText = s.matchId;
+        document.getElementById('inning').innerText = s.inning;
+        if (s.battingTeam) {
+            document.getElementById('teams').innerText =
+                s.battingTeam + (s.bowlingTeam ? ' vs ' + s.bowlingTeam : '') +
+                (s.target != null ? '  (target ' + s.target + ')' : '');
+        }
+        if (s.runs !== undefined) document.getElementById('score').innerText = s.runs + '/' + s.wickets;
+        if (s.oversCompleted !== undefined)
+            document.getElementById('overs').innerText = s.oversCompleted + ' overs (v' + s.stateVersion + ')';
+    }
+
+    function paintProb(d) {
+        if (d.winProbability !== null && d.winProbability !== undefined) {
+            const pct = (d.winProbability * 100).toFixed(1) + '%';
+            const fill = document.getElementById('probFill');
+            fill.style.width = pct;
+            fill.textContent = pct + ' (' + d.modelType + ', v' + d.stateVersion +
+                (d.stale ? ', stale' : '') + ')';
+        } else if (d.predictedScore !== null && d.predictedScore !== undefined) {
+            document.getElementById('probFill').style.width = '100%';
+            document.getElementById('probFill').textContent =
+                'predicted score ' + d.predictedScore.toFixed(1) + ' (montecarlo, v' + d.stateVersion + ')';
+        }
+    }
+
+    // ---------- REST snapshot so subscribing shows data instantly ----------
+
+    async function loadState(id) {
+        try {
+            const r = await fetch('/api/matches/' + id + '/state');
+            if (!r.ok) { log('Match ' + id + ' not found (HTTP ' + r.status + ')'); return null; }
+            const d = await r.json();
+            paintState(d);
+            log('Loaded state: ' + d.runs + '/' + d.wickets + ' @ ' + d.oversCompleted +
+                ' overs, innings ' + d.inning);
+            return d;
+        } catch (e) { log('State load failed: ' + e); return null; }
+    }
+
+    async function loadLatestPrediction(id) {
+        try {
+            const r = await fetch('/api/matches/' + id + '/predictions');
+            if (!r.ok) return;
+            const arr = await r.json();
+            if (arr && arr.length) {
+                paintProb(arr[0]);
+                log('Latest prediction: ' + JSON.stringify(arr[0]).substring(0, 120));
+            } else {
+                log('No predictions yet for match ' + id + ' - bowl a ball to generate one');
+            }
+        } catch (e) { log('Prediction load failed: ' + e); }
+    }
+
+    // ---------- WebSocket ----------
 
     const socket = new SockJS('/ws');
     const stomp = Stomp.over(socket);
     stomp.debug = null;
 
-    stomp.connect({}, () => {
-        log('Connected to /ws (STOMP)');
-    }, err => log('Connection error: ' + err));
+    stomp.connect({}, () => log('Connected to /ws (STOMP)'),
+                  err => log('Connection error: ' + err));
 
     function subscribe() {
         const id = document.getElementById('inputMatchId').value.trim();
-        if (!id) { log('Enter a match id first'); return; }
+        if (!id) { log('Enter a match id first (or click "+ New match")'); return; }
+        if (!stomp.connected) { log('STOMP still connecting - click Subscribe again in a second'); return; }
         if (subscribed) subscribed.forEach(s => s.unsubscribe());
 
-        document.getElementById('matchId').innerText = id;
         subscribed = [
             stomp.subscribe('/topic/match/' + id + '/score', msg => {
                 const d = JSON.parse(msg.body);
-                document.getElementById('teams').innerText = d.battingTeam;
-                document.getElementById('score').innerText = d.runs + '/' + d.wickets;
-                document.getElementById('overs').innerText = d.oversCompleted + ' overs (v' + d.stateVersion + ')';
-                document.getElementById('inning').innerText = d.inning;
+                paintState(d);
                 log('SCORE ' + d.runs + '/' + d.wickets + ' @ ' + d.oversCompleted + ' (v' + d.stateVersion + ')');
             }),
             stomp.subscribe('/topic/match/' + id + '/prob', msg => {
                 const d = JSON.parse(msg.body);
-                if (d.winProbability !== null && d.winProbability !== undefined) {
-                    const pct = (d.winProbability * 100).toFixed(1) + '%';
-                    const fill = document.getElementById('probFill');
-                    fill.style.width = pct;
-                    fill.textContent = pct + ' (' + d.modelType + ', v' + d.stateVersion + ')';
-                    log('PROB ' + pct + ' ' + d.modelType + ' in ' + d.latencyMs + 'ms');
-                } else {
+                paintProb(d);
+                if (d.winProbability !== null && d.winProbability !== undefined)
+                    log('PROB ' + (d.winProbability * 100).toFixed(1) + '% ' + d.modelType + ' in ' + d.latencyMs + 'ms');
+                else
                     log('SCORE PREDICTION: ' + d.predictedScore + ' (montecarlo, v' + d.stateVersion + ')');
-                }
             }),
             stomp.subscribe('/topic/match/' + id + '/ball', msg => {
                 const d = JSON.parse(msg.body);
-                log('BALL over ' + d.over + '.' + d.ball + ' ' + d.striker + ' ' + d.runs + (d.wicket ? ' WICKET!' : ''));
+                log('BALL over ' + d.over + '.' + d.ball + ' ' + d.striker + ' ' + d.runs +
+                    (d.wicket ? ' WICKET!' : ''));
             })
         ];
         log('Subscribed to /topic/match/' + id + '/{score,prob,ball}');
+        loadState(id);                 // <-- immediate snapshot: no more "Waiting..." forever
+        loadLatestPrediction(id);
+    }
+
+    // ---------- demo actions ----------
+
+    async function newMatch() {
+        const t1 = document.getElementById('team1').value;
+        const t2 = document.getElementById('team2').value;
+        if (t1 === t2) { log('Pick two different teams'); return; }
+        try {
+            const r = await fetch('/api/matches', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ team1: t1, team2: t2 })
+            });
+            if (!r.ok) { log('Create failed (HTTP ' + r.status + ')'); return; }
+            const m = await r.json();
+            document.getElementById('inputMatchId').value = m.id;
+            log('Created match ' + m.id + ' (' + t1 + ' vs ' + t2 + ')');
+            subscribe();
+        } catch (e) { log('Create failed: ' + e); }
+    }
+
+    async function bowlBall() {
+        const id = document.getElementById('inputMatchId').value.trim();
+        if (!id) { log('Create a match or enter an id first'); return; }
+        // Make sure we know the current balls bowled for over/ball numbering.
+        if (!lastState || String(lastState.matchId) !== String(id)) {
+            const ok = await loadState(id);
+            if (!ok) return;
+        }
+        const s = lastState;
+        if (s.target != null && s.runs >= s.target) { log('Match ' + id + ' - chase already completed'); return; }
+        if (s.ballsBowled >= 120 || s.wickets >= 10) { log('Match ' + id + ' - innings over'); return; }
+
+        const over = Math.floor(s.ballsBowled / 6) + 1;
+        const ball = (s.ballsBowled % 6) + 1;
+        const runs = pick([0, 0, 1, 1, 2, 4, 6]);
+        const wicket = Math.random() < 0.08;
+        const payload = {
+            inning: s.inning, over: over, ball: ball,
+            striker: pick(BATSMEN), nonStriker: pick(BATSMEN),
+            bowler: pick(BOWLERS), runs: runs, wicket: wicket,
+            eventId: 'ui-' + id + '-' + Date.now()
+        };
+        try {
+            const r = await fetch('/api/matches/' + id + '/balls', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            const body = await r.json().catch(() => null);
+            if (!r.ok) {
+                log('Bowl rejected (HTTP ' + r.status + '): ' +
+                    ((body && (body.message || body.error || body.detail)) || ''));
+                return;
+            }
+            log('BOWLED over ' + over + '.' + ball + ': ' + runs + (wicket ? ' WICKET!' : ''));
+            if (body.state) paintState(body.state);
+            if (body.prediction) paintProb(body.prediction);
+            else if (body.predictionError) log('predictionError: ' + body.predictionError);
+        } catch (e) { log('Bowl failed: ' + e); }
     }
 </script>
 </body>

@@ -80,7 +80,10 @@ container** to prove ingestion survives an ML outage without inventing numbers.
   `POST /api/matches`, `POST /api/matches/{id}/balls`,
   `POST /api/matches/{id}/predict`, `GET /api/matches/{id}/predictions`.
 - **WebSocket / STOMP** — connect to `ws://localhost:8081/ws`, subscribe to
-  `/topic/match/{id}/prob`. Browser demo at `http://localhost:8081/index.html`.
+  `/topic/match/{id}/prob`. Browser demo at `http://localhost:8081/index.html` —
+  it loads the match's current state the moment you subscribe, and has
+  **+ New match** / **▶ Bowl next ball** buttons so you can drive a full match
+  from the browser with no terminal commands.
 - **FastAPI directly** — interactive docs at `http://localhost:8000/docs`.
 
 ## Operations
